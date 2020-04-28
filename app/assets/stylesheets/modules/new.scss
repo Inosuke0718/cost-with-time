@@ -1,0 +1,79 @@
+.content-wrap{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .price{
+    display: flex;
+    font-size: 50px;
+    padding-bottom: 30px;
+  }
+
+  .time{
+    text-align: center;
+
+  .timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    }
+  }
+
+  .btn{
+    display: flex;
+    margin-top:20px;
+    position: relative;
+
+    #stop{
+      display: none;
+    }
+
+  }
+  .login{
+    width: 20px;
+   height: 20px;
+   position: absolute;
+   left: 55px;
+  }
+
+  .reg-wrapp{
+    display: flex;
+    margin-top: 50px;
+    
+    .reg-info{
+    
+      .reg-info__input{
+        display: flex;
+        align-items: center;
+
+        .reg-info__input--wage{
+          width: 50px;
+          text-align: right;
+          border: none;
+          outline: none;
+        }
+
+        .reg-info__input--people{
+          width: 40px;
+          margin-left: 10px;
+          text-align: right;
+          border: none;
+          outline: none;
+        }
+
+        #add{
+          margin-left: 15px;
+        }
+
+        #minus{
+          margin-left: 15px;
+        }
+
+      }
+    }
+  }
+}

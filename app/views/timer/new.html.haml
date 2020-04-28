@@ -1,0 +1,55 @@
+.content-wrap
+
+  -# .timer{id:"timer"}
+  -#   0:00:000
+
+  .price
+    .price__unit
+      ¥
+    .price__act{id:"price__act"}
+      0
+  
+  .time
+    .time__name
+      TIME
+    .timer{id:"timer"}
+      00:00:00
+    -# .unit
+    -#   .unit__hour
+    -#     H
+    -#   .unit__min
+    -#     M
+    -#   .unit__sec
+    -#     S
+
+  .btn
+    
+    %button{id: "play"}
+      = icon('fas', 'play')
+
+    %button{id: "stop"}
+      = icon('fas', 'stop')
+
+    %button{id: "reset"}
+      = icon('fas', 'undo-alt')
+
+    %button{id: "save"}
+      = icon('fas', 'save')
+    
+    = link_to "", new_user_session_path, class: 'login'
+  
+
+  .reg-wrapp
+    .reg-info{id:"reg-info"}
+      .reg-info__input
+        %input.reg-info__input--wage{:id => "wage-1", :name => "wage", :type => "number", :value =>"123", :placeholder =>"num"}
+        00 ¥/h
+
+        %input.reg-info__input--people{id: "people-1", name: "people", type: "number", value: "", :placeholder =>"num"}
+        people
+
+        %button{id: "add"}
+          = icon('fas', 'user-plus')
+          
+          
+   
