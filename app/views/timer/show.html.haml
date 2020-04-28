@@ -1,0 +1,7 @@
+.main-chat__header--group-member
+  - @timers.each do |timer|
+    -if current_user.id == timer.id     
+      = timer.wage
+      = timer.money
+      = current_user.id
+      = timer.id 

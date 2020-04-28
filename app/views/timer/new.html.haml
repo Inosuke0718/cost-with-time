@@ -36,7 +36,10 @@
     %button{id: "save"}
       = icon('fas', 'save')
     
-    = link_to "", new_user_session_path, class: 'login'
+    -# = link_to "", timer_path(current_user.id), class: 'login'
+    -# = form_with model: @timer do |f|
+    -#   = form.text_field :email
+    -#   = form.submit
   
 
   .reg-wrapp

@@ -19,7 +19,7 @@
             = current_user.name
             %ul.user__info
               %li
-                = link_to "History", "/users/#{current_user.id}"
+                = link_to "History", "/timer/#{current_user.id}"
                 = link_to "Logout", destroy_user_session_path, method: :delete
       - else
         .grid-6

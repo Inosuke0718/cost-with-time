@@ -152,5 +152,17 @@ $(function() {
 
   });
 
+  $(document).on("click", "#save",function(){
+    var dataTimer = {'timer' :{ "id" :"2", "money" :calcRslt, "time" :"2", "wage" :"1000", "people" :"3", "created_at" :"2020-04-28 11:03:07"}};
+   
+    $.ajax({
+      url: "/timer",
+      type: "POST",
+      data: dataTimer,
+      dataType: 'html',
+    })
+
+  });
+
 
 }); 
