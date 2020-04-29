@@ -35,9 +35,6 @@ $(function() {
   });
 
   $(document).on("click", "#minus",function(){
-  // $('#xminusxxx').on('click',function(){
-    console.log("AAA");
-    console.log("AAAAA");
     $(this).parent().remove(); 
   });
 
