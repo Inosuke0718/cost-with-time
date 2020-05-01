@@ -6,18 +6,17 @@ class TimerController < ApplicationController
     @timers = Timer.all
   end
 
-  def create
+  def create  
     # binding.pry
+    @timer = Timer.create(timer_params)
+    respond_to do |format|
+      format.html { redirect_to timer_new_path  }
+      format.json
+    end
+
     # @timer = Timer.new
     # Timer.create(timer_params)
-    # redirect_to root_path
-
-
-   
-    @timer = Timer.new
-    @timer.save
-    Timer.create
-    binding.pry
+    # binding.pry
     # redirect_to root_path
   end
 
@@ -28,8 +27,8 @@ class TimerController < ApplicationController
 
   private
   def timer_params
-    params.require(:timer).permit(:id, :money, :time, :wage, :people, :created_at)
-    binding.pry
+    params.require(:timer).permit(:money, :time, :wage, :people).merge(user_id: current_user.id)
+  
   end
 
 end

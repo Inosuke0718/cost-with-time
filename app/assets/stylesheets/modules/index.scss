@@ -69,17 +69,45 @@
       padding-top: 20px;
       padding-bottom: 10px;
     }
+
+    // #start-btn{
+    //   color: rgb(255, 230, 0);
+    //   -webkit-transition: all 0.3s ease;
+    //   -moz-transition: all 0.3s ease;
+    //   -o-transition: all 0.3s ease;
+    //   transition: all  0.3s ease;
+    // }
+
+    #start-btn:hover{
+      color: rgb(88, 181, 235);
+    }
     
     a{
       text-decoration: none;
       color: rgb(255, 230, 0);
       font-family: futura;
-    
+      opacity: 1;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all  0.3s ease;
     }
 
-    .grid-6{
+    a:hover{
+      color: rgb(88, 181, 235);
+
+    }
+
+    .user-nav{
       display: flex;
       flex-direction: column;
     }
+  }
+
+  .graph{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
   }
 }

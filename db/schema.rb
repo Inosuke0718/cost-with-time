@@ -13,10 +13,11 @@
 ActiveRecord::Schema.define(version: 20200428045715) do
 
   create_table "timers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "money",      null: false
-    t.integer  "time",       null: false
-    t.integer  "wage",       null: false
-    t.integer  "people",     null: false
+    t.integer  "user_id"
+    t.integer  "money"
+    t.integer  "time"
+    t.integer  "wage"
+    t.integer  "people"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

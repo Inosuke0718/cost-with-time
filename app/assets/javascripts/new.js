@@ -17,6 +17,13 @@ $(function() {
   var calcRslt = 0;
   var calcWageRate = 0;
   var calcRsltPast = 0;
+  var h;
+  var m;
+  var s;
+  var cntPeople = 0;
+  var cntAveWage = 0;
+  var aveWage = 0;
+
 
   $('#add').click(function(){
     var html =  `<div class="reg-info__input">
@@ -66,9 +73,12 @@ $(function() {
 
       if($(`#wage-${i}`).length){
         var valWage = $(`#wage-${i}`).val() *100 / 3600;
-        console.log(valWage)
+        // console.log(valWage)
         var valPeople = $(`#people-${i}`).val();
         calcWageRate = valWage * valPeople + calcWageRate 
+        cntPeople = parseInt(cntPeople) + parseInt(valPeople)
+        // cntAveWage = parseInt(cntAveWage) + 1
+
       }else{
         console.log("naiyo")
       }
@@ -81,9 +91,9 @@ $(function() {
   }
 
   function updateTimetText(){
-    var h = Math.floor(elapsedTime / 3600000000);
-    var m = Math.floor(elapsedTime / 60000);
-    var s = Math.floor(elapsedTime % 60000 / 1000);
+    h = Math.floor(elapsedTime / 3600000000);
+    m = Math.floor(elapsedTime / 60000);
+    s = Math.floor(elapsedTime % 60000 / 1000);
 
     h = ('0' + h).slice(-2); 
     m = ('0' + m).slice(-2); 
@@ -148,15 +158,39 @@ $(function() {
     }
 
   });
-
+  // $('#inoue').on('submit', function(e){
+  // e.preventDefault();
   $(document).on("click", "#save",function(){
-    var dataTimer = {'timer' :{ "id" :"2", "money" :calcRslt, "time" :"2", "wage" :"1000", "people" :"3", "created_at" :"2020-04-28 11:03:07"}};
+
+    var recTime = elapsedTime / 1000
+
+    // var dataTimer = {'timer' :{ "id" :"1", "money" :"111", "time" :"2", "wage" :"1000", "people" :"3", "created_at" :"2020-04-28 11:03:07"}};
+    var dataTimer = {'timer' :{ "money" :Math.round(calcRslt), "time" :recTime, "wage" :calcWageRate * 3600 / cntPeople , "people" :cntPeople}};
+  //  debugger
    
+    $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+      var token;
+      if (!options.crossDomain) {
+      token = $('meta[name="csrf-token"]').attr('content');
+         if (token) {
+            return jqXHR.setRequestHeader('X-CSRF-Token', token);
+          }
+       }
+    });
+
     $.ajax({
       url: "/timer",
       type: "POST",
       data: dataTimer,
-      dataType: 'html',
+      dataType: 'json',
+    })
+
+    .done(function(){
+      alert('saved');
+    })
+
+    .fail(function(){
+      alert('error');
     })
 
   });

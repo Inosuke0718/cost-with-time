@@ -1,7 +1,60 @@
-.main-chat__header--group-member
-  - @timers.each do |timer|
-    -if current_user.id == timer.id     
-      = timer.wage
-      = timer.money
-      = current_user.id
-      = timer.id 
+.all-wrapp
+  .result-wrapp
+    = javascript_include_tag "history.js"
+    .totalCost
+      .totalCost__title
+        You've spend this amount for the meeting
+      
+      .totalCost__uni-number
+      
+        .totalCost__unit
+          ¥
+        .totalCost__number{id: "totalCost__number"}
+
+          -array = []
+          - @timers.each do |timer|
+            -if current_user.id == timer.user_id   
+              -array << timer.money
+      
+          =array.sum
+
+
+  .table-wrapp
+    #title
+      Detals
+    %table{border: "0", rules: "rows", id: "table1"}
+      %tr{id: "hisTbl"} 
+        %th 
+          Cost(¥)
+        %th 
+          Meeting time(sec)
+        %th
+          Average wages(¥/h)
+        %th
+          Participants
+        %th
+          Date
+
+      -array = []
+
+      - @timers.each do |timer|
+        -if current_user.id == timer.user_id   
+          %tr  
+            %td
+              = timer.money
+            %td
+              = timer.time
+            %td
+              = timer.wage
+            %td
+              = timer.people
+            %td
+              = timer.created_at
+
+
+     
+
+
+   
+
+      

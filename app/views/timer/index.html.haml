@@ -1,5 +1,8 @@
 .wrapper
 
+  = javascript_include_tag "index.js"
+
+
   %section.titles
     %span.title
       Cost With Time
@@ -10,14 +13,14 @@
   
   .life-time
     You have
-    .life-time__left
-      423498243.244321
-    hour
+    .life-time__left{id: "left-time"} 
+      = (80 * 365 * 24 * 3600) - (current_user.age * 365 * 24 * 3600)
+    sec
   
 
   %section.btns
     .start-btn
-      = link_to "START", new_timer_path, method: :get
+      = link_to "START", new_timer_path, method: :get , id: "start-btn"
     
     - if user_signed_in?
       .user-nav
@@ -28,6 +31,8 @@
               = link_to "History", "/timer/#{current_user.id}"
               = link_to "Logout", destroy_user_session_path, method: :delete
     - else
-      .grid-6
+      .user-nav
         = link_to "-Login", new_user_session_path, class: 'post'
         = link_to "-Registration", new_user_registration_path, class: 'post'
+
+    
