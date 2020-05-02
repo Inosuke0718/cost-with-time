@@ -165,6 +165,11 @@
 
 
   .how-to-use{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
     .how-to1{
       .how-to__picture1{
         width: 40%;

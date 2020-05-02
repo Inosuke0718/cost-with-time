@@ -55,3 +55,7 @@ gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'devise'
 gem 'pry-rails'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
