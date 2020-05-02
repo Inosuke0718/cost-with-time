@@ -8,9 +8,6 @@ $(function() {
   // console.log(inoue)
   // console.log(lifeTime.content)
   countdown()
-
-  
- 
   function countdown(){
 
   
@@ -24,9 +21,28 @@ $(function() {
         // debugger
         countdown();
     },100);
-    
-    // lifeTime.textContent = leftTime
+  
 
   }
 
+  const element = document.getElementById("details")
+
+  $('#details').click(function(){
+
+    window.scroll({
+      top: 9000,
+      behavior: 'smooth'
+    });
+
+    // var adjust = 0;
+    // var speed = 400;
+    // debugger
+    // var href= $(this).attr("details");
+    // var target = $("details")
+    // var position = $("details").offset().top + adjust;
+    // debugger
+    // $('body,html').animate({scrollTop:position}, speed, 'swing');
+    // return false;
+
+  })
 })

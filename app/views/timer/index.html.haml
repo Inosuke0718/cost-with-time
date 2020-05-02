@@ -1,8 +1,5 @@
 .wrapper
-
   = javascript_include_tag "index.js"
-
-
   %section.titles
     %span.title
       Cost With Time
@@ -12,11 +9,18 @@
 
   
   .life-time
-    You have
+    .life-time__title
+      Your life limit
     .life-time__left{id: "left-time"} 
       = (80 * 365 * 24 * 3600) - (current_user.age * 365 * 24 * 3600)
-    sec
-  
+    .life-time__unit
+      sec
+    
+    .life-time__title--btn
+      What is this for
+
+    %button{id: "details"}
+      = icon('fas', 'chevron-down')
 
   %section.btns
     .start-btn
@@ -35,4 +39,41 @@
         = link_to "-Login", new_user_session_path, class: 'post'
         = link_to "-Registration", new_user_registration_path, class: 'post'
 
-    
+
+.wrapper-second
+  %script{src: "//code.jquery.com/jquery-1.11.3.min.js"}
+  = javascript_include_tag "index.js"
+  %section.second-page
+    .second-page__title
+      Welcome to Cost With Time
+    .second-page__content
+      The main theme of this app is "remember that time is finite and important things". 
+      %br
+        However, it is not effective even if explained in words,so I made a timer that converts time to everyone's favorite money.
+
+  %section.how-to-use
+    .how-to1
+      .how-to__title
+        Step1
+      %img.how-to__picture1{src: "/assets/how-to1.png"}
+      .how-to__description
+        Please enter the 2 infomation
+        %br
+          1- hourly wage
+          %br
+            2- number of participates
+
+    .how-to2
+      .how-to__title
+        Step2
+      %img.how-to__picture2{src: "/assets/how-to2.png"}
+      .how-to__description
+        Click the play button
+
+
+
+  %section.link
+    .start-btn
+      = link_to "LET'S START", new_timer_path, method: :get , id: "start-btn2"
+
+

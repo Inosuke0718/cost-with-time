@@ -20,8 +20,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // padding-right: 25px;
-    // padding-left: 25px;
 
     .title{
       color: White;
@@ -33,24 +31,71 @@
       color: gray;
       font-style: italic;
       font-family: Avenir;
-      // padding-top: 15px;
     }
   }
 
   .life-time{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 100%;
     // background-color: rgb(34, 33, 33);
     // opacity: 0.55;
-    font-family: futura;
-    font-size: 25px;
+    font-family: Avenir;
+    font-size: 40px;
+    font-size: 4vw;
     color: white;
     text-align: center;
+    position: relative;
+
+
+    .life-time__left{
+    // font-size: 60px;
+    font-size: 7vw;
+
+    font-family: Avenir; 
+    }
+
+    .life-time__unit{
+      font-size: 4vw;
+      // position: absolute;
+      // top: 75px;
+      margin-top: -10px;
+    }
+
+    .life-time__title--btn{
+      // position: absolute;
+      // bottom: -230px;
+      font-size: 20px;
+      padding-top: 10vh;
+
+    }
+
+    #details{
+      // position: absolute;
+      // bottom: -300px;
+      border: none; 
+      outline: none; /* クリックしたときに表示される枠線を消す */
+      background: transparent;
+      color: white;
+      font-size: 60px;
+      animation: bound 3s infinite;
+    }
+
+    @keyframes bound {
+      0% { transform:translateY(0) }
+      5% { transform:translateY(0) }
+      10% { transform:translateY(0) }
+      20% { transform:translateY(-25px) }
+      25% { transform:translateY(0) }
+      30% { transform:translateY(-15px) }
+      50% { transform:translateY(0) }
+      100% { transform:translateY(0) }
+    }
 
   }
-
-
-
 
   .btns{
     height: 100vh;
@@ -64,25 +109,17 @@
     padding-right: 25px;
     padding-left: 25px;
 
-    .start-btn{
-      font-size: 25px;
+    #start-btn{
+      font-size: 40px;
       padding-top: 20px;
       padding-bottom: 10px;
     }
-
-    // #start-btn{
-    //   color: rgb(255, 230, 0);
-    //   -webkit-transition: all 0.3s ease;
-    //   -moz-transition: all 0.3s ease;
-    //   -o-transition: all 0.3s ease;
-    //   transition: all  0.3s ease;
-    // }
-
     #start-btn:hover{
       color: rgb(88, 181, 235);
     }
     
     a{
+      font-size: 20px;
       text-decoration: none;
       color: rgb(255, 230, 0);
       font-family: futura;
@@ -95,7 +132,6 @@
 
     a:hover{
       color: rgb(88, 181, 235);
-
     }
 
     .user-nav{
@@ -108,6 +144,42 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
   }
 }
+
+
+.wrapper-second {
+  background-color: white;
+    height: 100vh;
+    width: 100%;
+
+  .second-page{
+    display: flex;
+    flex-direction: column;
+
+    .second-page__title{
+      font-size: 30px;
+      color: blue;
+    }
+  }
+
+
+  .how-to-use{
+    .how-to1{
+      .how-to__picture1{
+        width: 40%;
+        max-width: 100%;
+        height:auto;
+      }
+    }
+    .how-to2{
+      .how-to__picture2{
+        height: 40vh;
+        max-height: 100%;
+        width:auto;
+      }
+    }
+  }
+
+}
+

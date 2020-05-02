@@ -47,14 +47,9 @@
     justify-content: space-evenly;
 
   .reg-wrapp{
-
-    
-    // padding-right: 50px;
     width: calc(50% - 70px);
-    font-family: futura;
+    font-family: Avenir;
     text-align: center;
-    // background-color:rgb(231, 230, 230);
-
 
     &__title{
       background-color:rgba(17, 105, 187, 0.637);
@@ -64,20 +59,15 @@
 
     .reg-info{
       color: darkgray;
-
       padding-top: 20px;
 
       .reg-info__input{
         display: flex;
         align-items: center;
         justify-content: center;
-        // text-align: center;
         flex-direction: row;
-        // margin:  0 auto; 
         display: flex;
         align-items: center;
-        // margin:  0 auto; 
-        // display: inline-block;   
         margin-bottom: 3px;
 
         .reg-info__input--wage{
@@ -107,10 +97,9 @@
     }
   }
   .graph{
-    font-family: futura;
+    font-family: Avenir;
     text-align: center;
     width: calc(50% - 80px);
-    // background-color:rgba(20, 127, 228, 0.637);
 
     &__title{
       background-color:rgba(17, 105, 187, 0.637);
