@@ -1,109 +1,155 @@
-.content-wrap{
-  height: 50vh;
+.wrapper{
   width: 100%;
+  height: 100vh;
+  background: url(/images/timer-back1.jpg) center center / cover no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height:300px;
 
-  .price{
+  .timer-wrap{
+    height: 50vh;
+    width: 100%;
     display: flex;
-    font-size: 80px;
-    padding-bottom: 30px;
-  }
-
-  .time{
-    text-align: center;
-
-  .timer{
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    }
-  }
-}
+    min-height:300px;
+    color: white;
 
-.btn{
-    display: flex;
-    margin-top:20px;
-    position: relative;
+    .price{
+      display: flex;
+      font-size: 80px;
+      padding-bottom: 30px;
 
-    #stop{
-      display: none;
-    }
-  }
-  .login{
-    width: 20px;
-   height: 20px;
-   position: absolute;
-   left: 55px;
-  }
-
-.people-graph-wrap{
-    height: calc(100vh -55vh);
-    display: flex;
-    justify-content: space-evenly;
-
-  .reg-wrapp{
-    width: calc(50% - 70px);
-    font-family: Avenir;
-    text-align: center;
-
-    &__title{
-      background-color:rgba(17, 105, 187, 0.637);
-      color: white;
+      &__unit{
+        padding-right: 15px;
+      }
     }
 
+    .time{
+      text-align: center;
 
-    .reg-info{
-      color: darkgray;
-      padding-top: 20px;
-
-      .reg-info__input{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        display: flex;
-        align-items: center;
-        margin-bottom: 3px;
-
-        .reg-info__input--wage{
-          width: 50px;
-          text-align: right;
-          border: none;
-          outline: none;
-        }
-
-        .reg-info__input--people{
-          width: 40px;
-          margin-left: 10px;
-          text-align: right;
-          border: none;
-          outline: none;
-        }
-
-        #add{
-          margin-left: 15px;
-        }
-
-        #minus{
-          margin-left: 15px;
-        }
-
+    .timer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
       }
     }
   }
-  .graph{
-    font-family: Avenir;
-    text-align: center;
-    width: calc(50% - 80px);
 
-    &__title{
-      background-color:rgba(17, 105, 187, 0.637);
-      color: white;
+  .btn{
+      display: flex;
+      margin-top:20px;
+
+
+      // height: 30px;
+      // position: relative;
+
+      #stop{
+        display: none;
+        color: white;
+        font-size: 25px;
+        border: none;  /* 枠線を消す */
+        outline: none; /* クリックしたときに表示される枠線を消す */
+        background: transparent; /* 背景の灰色を消す */
+        outline:0;
+      }
+
+      #play{
+        color: white;
+        font-size: 25px;
+        border: none;  /* 枠線を消す */
+        outline: none; /* クリックしたときに表示される枠線を消す */
+        background: transparent; /* 背景の灰色を消す */
+      }
+
+      #reset{
+        color: white;
+        font-size: 25px;
+        border: none;  /* 枠線を消す */
+        outline: none; /* クリックしたときに表示される枠線を消す */
+        background: transparent; /* 背景の灰色を消す */
+      }
+
+      #save{
+        color: white;
+        font-size: 25px;
+        border: none;  /* 枠線を消す */
+        outline: none; /* クリックしたときに表示される枠線を消す */
+        background: transparent; /* 背景の灰色を消す */
+      }
+    }
+    .login{
+      width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 55px;
+    }
+
+  .people-graph-wrap{
+      height: calc(100vh -50vh);
+      display: flex;
+      justify-content: space-evenly;
+
+    .reg-wrapp{
+      width: calc(50% - 70px);
+      font-family: Avenir;
+      text-align: center;
+
+      &__title{
+        background-color:rgba(17, 105, 187, 0.637);
+        color: white;
+      }
+
+
+      .reg-info{
+        color: darkgray;
+        padding-top: 20px;
+
+        .reg-info__input{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+          margin-bottom: 3px;
+
+          .reg-info__input--wage{
+            width: 50px;
+            text-align: right;
+            border: none;
+            outline: none;
+          }
+
+          .reg-info__input--people{
+            width: 40px;
+            margin-left: 10px;
+            text-align: right;
+            border: none;
+            outline: none;
+          }
+
+          #add{
+            margin-left: 15px;
+          }
+
+          #minus{
+            margin-left: 15px;
+          }
+
+        }
+      }
+    }
+    .graph{
+      font-family: Avenir;
+      text-align: center;
+      width: calc(50% - 80px);
+
+      &__title{
+        background-color:rgba(17, 105, 187, 0.637);
+        color: white;
+      }
     }
   }
 }

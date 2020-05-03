@@ -52,29 +52,29 @@
         However, it is not effective even if explained in words,so I made a timer that converts time to everyone's favorite money.
 
   %section.how-to-use
-    .how-to1
-      .how-to__title
-        Step1
-        /images/how-to1.png
-      -# %img.how-to__picture1{src: "/assets/how-to1.png"}
-      %img.how-to__picture1{src: "/images/how-to1.png"}
-      .how-to__description
-        Please enter the 2 infomation
-        %br
-          1- hourly wage
+    How to use
+    .wrapp-how-to
+      .wrapp-how-to1
+        .how-to1
+          Step1
           %br
-            2- number of participates
+            Enter the hourly wage and the number of participates
+          %img.how-to__picture1{src: "/images/how-to1.gif"}
+            -# .how-to__description
+              -# Enter the hourly wage and the number of participates
+              -# %br
+              -#   1- hourly wage
+              -#   %br
+              -#     2- number of participates
 
-    .how-to2
-      .how-to__title
-        Step2
-      -# %img.how-to__picture2{src: "/assets/how-to2.png"}
-      %img.how-to__picture2{src: "/images/how-to2.png"}
-      .how-to__description
-        Click the play button
+      .wrapp-how-to2
+        .how-to2
+          Step2
+          %br
+            Click the play button
+          %img.how-to__picture2{src: "/images/how-to2.gif"}
 
   %section.link
-    .start-btn
-      = link_to "LET'S START", new_timer_path, method: :get , id: "start-btn2"
-
+    -# .box-3
+    =link_to "LET'S START", new_timer_path, method: :get , class: "btn"
 

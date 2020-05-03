@@ -1,74 +1,66 @@
-.content-wrap
-  
-  = javascript_include_tag "new.js"
- 
-  -# .timer{id:"timer"}
-  -#   0:00:000
-
-  .price
-    .price__unit
-      ¥
-    .price__act{id:"price__act"}
-      0
-  
-  .time
-    .time__name
-      TIME
-    .timer{id:"timer"}
-      00:00:00
-    -# .unit
-    -#   .unit__hour
-    -#     H
-    -#   .unit__min
-    -#     M
-    -#   .unit__sec
-    -#     S
-
-
-  .btn
-    %button{id: "play"}
-      = icon('fas', 'play')
-
-    %button{id: "stop"}
-      = icon('fas', 'stop')
-
-    %button{id: "reset"}
-      = icon('fas', 'undo-alt')
-
-    %button{id: "save"}
-      = icon('fas', 'save')
-      -# = link_to "", timer_path(current_user.id), class: 'login'
-
-    -# = form_tag '/timer', method: :post , id: "inoue" do 
-      -# -# = text_field_tag :id
-      -# = submit_tag
-  
-.people-graph-wrap
-
-  .reg-wrapp
-    .reg-wrapp__title
-      Please enter the wages and the number of participants
-    .reg-info{id:"reg-info"}
-      .reg-info__input
-        %input.reg-info__input--wage{:id => "wage-1", :name => "wage", :type => "number", :value =>"123", :placeholder =>"num"}
-        00 ¥/h
-
-        %input.reg-info__input--people{id: "people-1", name: "people", type: "number", value: "", :placeholder =>"num"}
-        people
-
-        %button{id: "add"}
-          = icon('fas', 'user-plus')
-
-  %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"}
-
-
-  .graph
-    .graph__title
-      The simulation for this meeting costs
-    %canvas{id: "mycanvas"}
-      = javascript_include_tag "chart.js"
+.wrapper
+  .timer-wrap
     
-    -# %canvas{id: "mycanvas", style: "position: relative; height:80 width:50"}
+    = javascript_include_tag "new.js"
+
+    .price
+      .price__unit
+        ¥
+      .price__act{id:"price__act"}
+        0
+    
+    .time
+      .time__name
+        TIME
+      .timer{id:"timer"}
+        00:00:00
+
+
+
+    .btn
+      %button{id: "play"}
+        = icon('fas', 'play')
+
+      %button{id: "stop"}
+        = icon('fas', 'stop')
+
+      %button{id: "reset"}
+        = icon('fas', 'undo-alt')
+
+      %button{id: "save"}
+        = icon('fas', 'save')
+        -# = link_to "", timer_path(current_user.id), class: 'login'
+
+      -# = form_tag '/timer', method: :post , id: "inoue" do 
+        -# -# = text_field_tag :id
+        -# = submit_tag
+    
+  .people-graph-wrap
+
+    .reg-wrapp
+      .reg-wrapp__title
+        Please enter the wages and the number of participants
+      .reg-info{id:"reg-info"}
+        .reg-info__input
+          %input.reg-info__input--wage{:id => "wage-1", :name => "wage", :type => "number", :value =>"123", :placeholder =>"num"}
+          00 ¥/h
+
+          %input.reg-info__input--people{id: "people-1", name: "people", type: "number", value: "", :placeholder =>"num"}
+          people
+
+          %button{id: "add"}
+            = icon('fas', 'user-plus')
+
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"}
+
+
+    .graph
+      .graph__title
+        The simulation for this meeting costs
+      %canvas{id: "mycanvas"}
+        = javascript_include_tag "chart.js"
       
-          
-   
+      -# %canvas{id: "mycanvas", style: "position: relative; height:80 width:50"}
+        
+            
+    
