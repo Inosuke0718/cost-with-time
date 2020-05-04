@@ -1,10 +1,16 @@
+%header.history
+  Your recording history
+  
+  =link_to image_tag(src="/images/logo.jpg", height: "50", width: "auto"), "/", class: "iconCWT" 
+  -# %img.iconCWT{src: "/images/logo.jpg", height: "50", width: "auto"}
+  -#   = link_to "", "/"
+
 .all-wrapp
   .result-wrapp
     = javascript_include_tag "history.js"
     .totalCost
       .totalCost__title
-        You've spend this amount for the meeting
-      
+        You've spend this amount 
       .totalCost__uni-number
       
         .totalCost__unit
@@ -20,7 +26,7 @@
 
 
   .table-wrapp
-    #title
+    %h2
       Detals
     %table{border: "0", rules: "rows", id: "table1"}
       %tr{id: "hisTbl"} 
@@ -50,6 +56,12 @@
               = timer.people
             %td
               = timer.created_at
+
+  %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"}
+  .graph-history
+    %canvas{id: "graph-cost"}
+      = javascript_include_tag "history-graph.js"
+
 
 
      

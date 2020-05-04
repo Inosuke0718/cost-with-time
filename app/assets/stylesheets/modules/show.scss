@@ -1,15 +1,41 @@
+.history{
+  font-size: 40px;
+  width: 100%;
+  font-family: futura;
+  border-bottom: solid;
+  border-color: rgb(82, 79, 79);
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left:20px;
+  background-color:  #f4f5f3fb;
+  position: relative; 
+
+  .iconCWT{
+    position: absolute;          /* 位置指定 */
+    top: 50%;                    /* 親要素の半分下にずらす */
+    left: 50%;                   /* 親要素の半分右にずらす */
+    transform: translateY(-50%) translateX(-50%);    /* 要素自体の半分、上と左にずらす */
+    padding-top: 9px;    
+  }
+
+}
 .all-wrapp{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  padding-left:50px;
+  padding-right:50px;
+
+  // display: flex;
+  // justify-content: space-evenly;
+  // align-items: center;
   height: 100vh;
   width: 100%;
 
   .result-wrapp{
+    padding-top: 15px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 55%;
+    // align-items: center;
+    // width: 55%;
     
     .totalCost__uni-number{
       display: flex;
@@ -20,31 +46,35 @@
         padding-right: 15px;
       }
 
-
-    .totalCost__number{
-      font-size: 50px;
+      .totalCost__number{
+        font-size: 50px;
+      }
     }
   }
-}
-    
 
-    .table-wrapp{
-      display: flex;
-      flex-direction: column;
-   
+  .table-wrapp{
+    display: flex;
+    flex-direction: column;
+  
 
-      #title{
-        font-size: 20px;
+    #title{
+      font-size: 20px;
+    }
+    table{
+      font-size: 1vw;
+      color: rgb(54, 54, 54);
+
+      th, td, tr{
+        border-bottom:solid 1px silver;
+        padding-left: 8px;
       }
-      table{
-        font-size: 1vw;
-        color: rgb(54, 54, 54);
+    }
+  }
 
-        th, td, tr{
-          border-bottom:solid 1px silver;
-          padding-left: 8px;
-      }
-
+  .graph-history{
+    #graph-cost{
+      // height: 300px;
+      // color: red;
     }
   }
 }

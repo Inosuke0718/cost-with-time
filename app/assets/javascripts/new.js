@@ -26,17 +26,16 @@ $(function() {
 
 
   $('#add').click(function(){
-    var html =  `<div class="reg-info__input">
-                  <input class="reg-info__input--wage" id="wage-${cnt}" name="wage" type="number" value="123">
-                  00 ¥/h
-                  <input class="reg-info__input--people" id="people-${cnt}" name="people" type="number" value="">
-                  people
-
-                  <button id="minus">
-                  <i class="fas fa-user-minus"></i>
-                  </button>
-
+    var html = `<div class="reg-info__input">
+                <input class="reg-info__input--wage" id="wage-${cnt}" name="wage" placeholder="00,000" type="number">
+                ¥/h
+                <input class="reg-info__input--people" id="people-${cnt}" name="people" placeholder="0" type="number" value="">
+                people
+                <button id="minus">
+                <i class="fas fa-user-minus"></i>
+                </button>
                 </div>`
+
     $(".reg-info").append(html);
     cnt = cnt +1
   });
@@ -72,7 +71,7 @@ $(function() {
     for (let i = 1; i < cnt  ; i++) {
 
       if($(`#wage-${i}`).length){
-        var valWage = $(`#wage-${i}`).val() *100 / 3600;
+        var valWage = $(`#wage-${i}`).val()  / 3600;
         // console.log(valWage)
         var valPeople = $(`#people-${i}`).val();
         calcWageRate = valWage * valPeople + calcWageRate 

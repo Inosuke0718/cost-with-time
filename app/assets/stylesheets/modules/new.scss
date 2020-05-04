@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper-new{
   width: 100%;
   height: 100vh;
   background: url(/images/timer-back1.jpg) center center / cover no-repeat;
@@ -17,8 +17,8 @@
 
     .price{
       display: flex;
-      font-size: 80px;
-      padding-bottom: 30px;
+      font-size: 100px;
+      padding-bottom: 20px;
 
       &__unit{
         padding-right: 15px;
@@ -32,7 +32,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 30px;
+      font-size: 50px;
       }
     }
   }
@@ -69,6 +69,8 @@
         border: none;  /* 枠線を消す */
         outline: none; /* クリックしたときに表示される枠線を消す */
         background: transparent; /* 背景の灰色を消す */
+        margin-right: 15px;
+        margin-left: 15px;
       }
 
       #save{
@@ -88,6 +90,7 @@
 
   .people-graph-wrap{
       height: calc(100vh -50vh);
+
       display: flex;
       justify-content: space-evenly;
 
@@ -95,15 +98,21 @@
       width: calc(50% - 70px);
       font-family: Avenir;
       text-align: center;
+      background-color:rgba(151, 151, 151, 0.4);
+
 
       &__title{
-        background-color:rgba(17, 105, 187, 0.637);
+        // background-color:rgba(17, 105, 187, 0.637);
         color: white;
+        color: rgb(41, 41, 61);
+        text-decoration: underline;
+        font-size: 18px;
+
       }
 
 
       .reg-info{
-        color: darkgray;
+        color: rgb(255, 255, 255);
         padding-top: 20px;
 
         .reg-info__input{
@@ -115,11 +124,16 @@
           align-items: center;
           margin-bottom: 3px;
 
+          
+
           .reg-info__input--wage{
-            width: 50px;
+            width: 80px;
             text-align: right;
             border: none;
             outline: none;
+            background-color: rgba(255, 255, 255,0.4);
+            margin-right: 10px;
+
           }
 
           .reg-info__input--people{
@@ -128,14 +142,28 @@
             text-align: right;
             border: none;
             outline: none;
+            margin-right: 10px;
+            margin-left: 20px;     
+            background-color: rgba(255, 255, 255,0.4);
+   
           }
 
           #add{
             margin-left: 15px;
+            color: white;
+            font-size: 15px;
+            border: none;  /* 枠線を消す */
+            outline: none; /* クリックしたときに表示される枠線を消す */
+            background: transparent; /* 背景の灰色を消す */
           }
 
           #minus{
             margin-left: 15px;
+            color: white;
+            font-size: 15px;
+            border: none;  /* 枠線を消す */
+            outline: none; /* クリックしたときに表示される枠線を消す */
+            background: transparent; /* 背景の灰色を消す */
           }
 
         }
@@ -145,10 +173,13 @@
       font-family: Avenir;
       text-align: center;
       width: calc(50% - 80px);
+      background-color:rgba(151, 151, 151, 0.4);
 
       &__title{
-        background-color:rgba(17, 105, 187, 0.637);
-        color: white;
+        color: rgb(41, 41, 61);
+        text-decoration: underline;
+        font-size: 18px;
+
       }
     }
   }

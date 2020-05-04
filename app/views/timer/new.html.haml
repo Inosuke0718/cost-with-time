@@ -1,4 +1,9 @@
-.wrapper
+%header.history
+  Timer to convert the money
+  
+  =link_to image_tag(src="/images/logo.jpg", height: "50", width: "auto"), "/", class: "iconCWT" 
+
+.wrapper-new
   .timer-wrap
     
     = javascript_include_tag "new.js"
@@ -15,8 +20,6 @@
       .timer{id:"timer"}
         00:00:00
 
-
-
     .btn
       %button{id: "play"}
         = icon('fas', 'play')
@@ -29,11 +32,7 @@
 
       %button{id: "save"}
         = icon('fas', 'save')
-        -# = link_to "", timer_path(current_user.id), class: 'login'
 
-      -# = form_tag '/timer', method: :post , id: "inoue" do 
-        -# -# = text_field_tag :id
-        -# = submit_tag
     
   .people-graph-wrap
 
@@ -42,16 +41,18 @@
         Please enter the wages and the number of participants
       .reg-info{id:"reg-info"}
         .reg-info__input
-          %input.reg-info__input--wage{:id => "wage-1", :name => "wage", :type => "number", :value =>"123", :placeholder =>"num"}
-          00 ¥/h
+          %input.reg-info__input--wage{:id => "wage-1", :name => "wage", :type => "number",  :placeholder =>"00,000"}
+          ¥/h
 
-          %input.reg-info__input--people{id: "people-1", name: "people", type: "number", value: "", :placeholder =>"num"}
+          %input.reg-info__input--people{id: "people-1", name: "people", type: "number", value: "", :placeholder =>"0"}
           people
 
           %button{id: "add"}
             = icon('fas', 'user-plus')
 
-    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"}
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"}
+
+    -# %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"}
 
 
     .graph

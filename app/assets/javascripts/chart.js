@@ -45,7 +45,7 @@ $(function() {
       data: {
         labels: ['0', '0.5' , '1.0' ,'1.5' , '2.0' , '2.5', '3.0','3.5','4.0'],
         datasets: [{
-          label: '',
+          label: 'the increase of cost',
           data: [0, x05 , x10 , x15 , x20 , x25, x30, x35, x40],
           backgroundColor: "rgba(17, 105, 187, 0.637)"
         }, ]
@@ -58,7 +58,7 @@ $(function() {
       // },
       options: {
         responsive: true,
-        // maintainAspectRatio: false
+        // maintainAspectRatio: false,
         // legend: {
         //     display: false
         // },
@@ -68,14 +68,14 @@ $(function() {
               scaleLabel: {              //軸ラベル設定
                 display: true,          //表示設定
                 labelString: 'cost(¥)',  //ラベル
-                fontSize: 10               //フォントサイズ
+                fontSize: 15               //フォントサイズ
               },
-              // ticks: {                      //最大値最小値設定
-              //     min: 0,                   //最小値
+              ticks: {                      //最大値最小値設定
+                  min: 0,                   //最小値
               //     max: 30,                  //最大値
               //     fontSize: 18,             //フォントサイズ
               //     stepSize: 5               //軸間隔
-              // },
+              },
           }],
           xAxes: [{                         //x軸設定
               display: true,                //表示設定
@@ -84,7 +84,7 @@ $(function() {
               scaleLabel: {                 //軸ラベル設定
                 display: true,             //表示設定
                 labelString: 'time(hour)',  //ラベル
-                fontSize: 10               //フォントサイズ
+                fontSize: 15               //フォントサイズ
               },
               // ticks: {
               //     fontSize: 18             //フォントサイズ
