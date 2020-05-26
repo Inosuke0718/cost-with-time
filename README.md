@@ -13,8 +13,8 @@ Cost With Time
   会議、勉強、SNSやYouTube、ネットサーフィンなどの娯楽
 
 ## ・本番環境
-□ http://54.95.23.147/
-□ ID/Pass
+##### □ http://54.95.23.147/
+##### □ ID/Pass
   ログインID：test_account@test.com
   PassWord：aaaaaaaa (aが８つです)
 
