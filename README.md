@@ -27,13 +27,13 @@ http://54.95.23.147/
 
 ## ・DEMO
 #### 時間をお金に変換するタイマー機能
-![timer](https://imgur.com/w1oA6ns)
+![timer](https://user-images.githubusercontent.com/63226783/82920509-5195fa80-9fb2-11ea-9e2c-2c1592a6e4bc.gif)
 
 #### 履歴機能
 ![history](https://i.gyazo.com/9b93b6cb05cf3d6f66ef0c27f9fdc64e.png)
 
 #### 寿命カウンター
-![lifelimit](https://im7.ezgif.com/tmp/ezgif-7-60abef729747.gif)
+![lifelimit](https://user-images.githubusercontent.com/63226783/82920438-3b883a00-9fb2-11ea-8469-98059c696e05.gif)
 
 ## ・工夫したポイント
 #### □ トップページで余生をカウントダウン（※寿命を８０歳と仮定し算出）
