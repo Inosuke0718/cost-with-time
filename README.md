@@ -27,7 +27,7 @@ http://54.95.23.147/
 
 ## ・DEMO
 #### 時間をお金に変換するタイマー機能
-![timer](https://im7.ezgif.com/tmp/ezgif-7-289a2aac13b4.gif)
+![timer](https://imgur.com/w1oA6ns)
 
 #### 履歴機能
 ![history](https://i.gyazo.com/9b93b6cb05cf3d6f66ef0c27f9fdc64e.png)
