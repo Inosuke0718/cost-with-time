@@ -30,7 +30,7 @@ http://54.95.23.147/
 ![timer](https://im7.ezgif.com/tmp/ezgif-7-289a2aac13b4.gif)
 
 #### 履歴機能
-![history](https://i.gyazo.com/8e0935eeab218a3c8d4fb24c287cdf86.png)
+![history](https://i.gyazo.com/9b93b6cb05cf3d6f66ef0c27f9fdc64e.png)
 
 #### 寿命カウンター
 ![lifelimit](https://im7.ezgif.com/tmp/ezgif-7-60abef729747.gif)
