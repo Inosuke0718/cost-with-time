@@ -26,8 +26,9 @@ http://54.95.23.147/
 このタイマーを見える位置に置き、会議を行えば全員の意識が高まり、よりよい仕事に繋がると思います。
 
 ## ・DEMO
-![timer](https://gyazo.com/b6ab0e516c6b4dba9c7c00d5fa705fb6
-)
+![timer](https://i.gyazo.com/b6ab0e516c6b4dba9c7c00d5fa705fb6.gif)
+
+![demo](https://i.gyazo.com/b6ab0e516c6b4dba9c7c00d5fa705fb6.gif)
 
 ## ・工夫したポイント
 #### □ トップページで余生をカウントダウン（※寿命を８０歳と仮定し算出）
