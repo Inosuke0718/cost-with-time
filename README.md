@@ -35,6 +35,8 @@ http://54.95.23.147/
 #### 寿命カウンター
 ![lifelimit](https://i.gyazo.com/c57defdcf4ec1c2e16908c41f043da44.gif)
 
+![Image from Gyazo](https://i.gyazo.com/c57defdcf4ec1c2e16908c41f043da44.gif)
+
 ## ・工夫したポイント
 #### □ トップページで余生をカウントダウン（※寿命を８０歳と仮定し算出）
 #### 時間の有限で大切なものということを思い出すようにこの機能を追加しました。
