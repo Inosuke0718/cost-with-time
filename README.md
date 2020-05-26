@@ -16,8 +16,7 @@ Cost With Time
 #### □ 本番環境のURL
 http://54.95.23.147/
 #### □ ID/Pass
-ログインID：test_account@test.com
-PassWord：aaaaaaaa (aが８つです)
+ログインID：test_account@test.com  /  PassWord：aaaaaaaa (aが８つです)
 
 ## ・制作背景(意図)
 #### 「みんなで生産性の高い仕事がしたい」そんな思いからこのアプリを作成しました。
@@ -26,7 +25,8 @@ PassWord：aaaaaaaa (aが８つです)
 もし、時間をわかりやすい価値に変換できたら、時間に対するコスト意識が向上するのではないかと考えました。
 このタイマーを見える位置に置き、会議を行えば全員の意識が高まり、よりよい仕事に繋がると思います。
 
-## ・DEMO(gifで動画や写真を貼って、ビューのイメージを掴んでもらいます)
+## ・DEMO
+<img alt="timer" src = "https://gyazo.com/b6ab0e516c6b4dba9c7c00d5fa705fb6">
 
 ## ・工夫したポイント
 #### □ トップページで余生をカウントダウン（※寿命を８０歳と仮定し算出）
