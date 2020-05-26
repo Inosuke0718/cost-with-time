@@ -33,7 +33,7 @@ http://54.95.23.147/
 ![history](https://i.gyazo.com/8e0935eeab218a3c8d4fb24c287cdf86.png)
 
 #### 寿命カウンター
-![history](https://i.gyazo.com/c57defdcf4ec1c2e16908c41f043da44.gif)
+![lifelimit](https://i.gyazo.com/c57defdcf4ec1c2e16908c41f043da44.gif)
 
 ## ・工夫したポイント
 #### □ トップページで余生をカウントダウン（※寿命を８０歳と仮定し算出）
