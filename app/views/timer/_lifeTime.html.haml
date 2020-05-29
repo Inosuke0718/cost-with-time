@@ -1,0 +1,49 @@
+-# %html{:lang => "ja"}
+-#   %head
+-#     -# %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+-#     -# %meta{:charset => "utf-8"}/
+-#     -# %meta{:content => "width=device-width", :name => "viewport"}/
+-#     -# %meta{:content => "noindex,nofollow", :name => "robots"}/
+-#     -# %link{:href => "https://lopan.jp/css-animation", :rel => "canonical"}/
+-#     -# %link{:href => "style.css", :rel => "stylesheet"}/
+%body.slide
+  .slideshow
+    %input#switch1{:checked => "checked", :name => "slideshow", :type => "radio"}/
+    %input#switch2{:name => "slideshow", :type => "radio"}/
+    %input#switch3{:name => "slideshow", :type => "radio"}/
+    %input#switch4{:name => "slideshow", :type => "radio"}/
+    
+    .slideContents
+      %section#slide1
+        .contents
+          %p.lifetime{id: "left-time"}
+            = @lifeTimeSec
+          %h1.time-unit sec
+      %section#slide2
+        .contents
+          %p.lifetime
+            = @lifeTimeHour 
+          %h1.time-unit hour
+      %section#slide3
+        .contents
+          %p.lifetime
+            = @lifeTimeDay
+          %h1.time-unit days
+      %section#slide4
+        .contents
+          %p.lifetime
+            = @lifeTimeDay
+          %h1.time-unit months
+
+    %p.arrow.prev
+      %i.ico
+      %label{:for => "switch1"}
+      %label{:for => "switch2"}
+      %label{:for => "switch3"}
+      %label{:for => "switch4"}
+    %p.arrow.next
+      %i.ico
+      %label{:for => "switch1"}
+      %label{:for => "switch2"}
+      %label{:for => "switch3"}
+      %label{:for => "switch4"}

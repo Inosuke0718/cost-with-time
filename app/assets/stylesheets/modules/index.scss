@@ -42,43 +42,37 @@
     align-items: center;
     height: 50px;
     width: 100%;
-    // background-color: rgb(34, 33, 33);
-    // opacity: 0.55;
     font-family: Avenir;
-    font-size: 40px;
+    // font-size: 40px;
     font-size: 4vw;
     color: white;
     text-align: center;
     position: relative;
 
+    &__title{
+      width: 100%;
+    }
+
 
     .life-time__left{
-    // font-size: 60px;
     font-size: 7vw;
-
     font-family: Avenir; 
     }
 
     .life-time__unit{
       font-size: 4vw;
-      // position: absolute;
-      // top: 75px;
       margin-top: -10px;
     }
 
     .life-time__title--btn{
-      // position: absolute;
-      // bottom: -230px;
       font-size: 20px;
       padding-top: 10vh;
 
     }
 
     #details{
-      // position: absolute;
-      // bottom: -300px;
       border: none; 
-      outline: none; /* クリックしたときに表示される枠線を消す */
+      outline: none; 
       background: transparent;
       color: white;
       font-size: 60px;

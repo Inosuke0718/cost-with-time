@@ -2,8 +2,6 @@
   Your recording history
   
   =link_to image_tag(src="/images/logo.jpg", height: "50", width: "auto"), "/", class: "iconCWT" 
-  -# %img.iconCWT{src: "/images/logo.jpg", height: "50", width: "auto"}
-  -#   = link_to "", "/"
 
 .all-wrapp
   .result-wrapp
@@ -12,7 +10,6 @@
       .totalCost__title
         You've spend this amount 
       .totalCost__uni-number
-      
         .totalCost__unit
           ¥
         .totalCost__number{id: "totalCost__number"}
@@ -21,9 +18,7 @@
           - @timers.each do |timer|
             -if current_user.id == timer.user_id   
               -array << timer.money
-      
           =array.sum
-
 
   .table-wrapp
     %h2
@@ -62,11 +57,6 @@
     %canvas{id: "graph-cost"}
       = javascript_include_tag "history-graph.js"
 
-
-
-     
-
-
-   
+  
 
       

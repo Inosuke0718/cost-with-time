@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 20200428045715) do
 
   create_table "timers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.integer  "money"
-    t.integer  "time"
+    t.integer  "time",       null: false
     t.integer  "wage"
     t.integer  "people"
     t.datetime "created_at", null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20200428045715) do
     t.string   "name",                                null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.integer  "age"
+    t.date     "birthday"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

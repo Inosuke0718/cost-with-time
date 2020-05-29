@@ -3,19 +3,16 @@
   %section.titles
     %span.title
       Cost With Time
+      
 
     .subtitle
       Let's increase our work efficiency
-
   
   .life-time
     .life-time__title
-      Your life limit
-    .life-time__left{id: "left-time"} 
-      = (80 * 365 * 24 * 3600) - (current_user.age * 365 * 24 * 3600)
-    .life-time__unit
-      sec
-    
+      = @whosLimit
+      = render "lifeTime"
+   
     .life-time__title--btn
       What is this for
 
@@ -29,7 +26,6 @@
     - if user_signed_in?
       .user-nav
         %span
-          -# = current_user.name
           %ul.user__info
             %li
               = link_to "History", "/timer/#{current_user.id}"
@@ -60,12 +56,6 @@
           %br
             Enter the hourly wage and the number of participates
           %img.how-to__picture1{src: "/images/how-to1.gif"}
-            -# .how-to__description
-              -# Enter the hourly wage and the number of participates
-              -# %br
-              -#   1- hourly wage
-              -#   %br
-              -#     2- number of participates
 
       .wrapp-how-to2
         .how-to2
@@ -75,6 +65,5 @@
           %img.how-to__picture2{src: "/images/how-to2.gif"}
 
   %section.link
-    -# .box-3
     =link_to "LET'S START", new_timer_path, method: :get , class: "btn"
 

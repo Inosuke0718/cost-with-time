@@ -33,6 +33,13 @@
       %button{id: "save"}
         = icon('fas', 'save')
 
+      -# - if user_signed_in?
+      -#   %button{id: "save"}
+      -#     = icon('fas', 'save')
+      -# - else
+      -#   %button{id: "save"}
+      -#     = icon('fas', 'save')
+      -#     = link_to "ccc", new_user_session_path, class: 'login-btm'
     
   .people-graph-wrap
 
@@ -52,16 +59,9 @@
 
     %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"}
 
-    -# %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"}
-
-
     .graph
       .graph__title
         The simulation for this meeting costs
       %canvas{id: "mycanvas"}
         = javascript_include_tag "chart.js"
-      
-      -# %canvas{id: "mycanvas", style: "position: relative; height:80 width:50"}
-        
-            
-    
+  
