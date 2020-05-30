@@ -6,11 +6,9 @@
   display: flex;
   width: 100%;
   height: auto;
-  // background: url(tate2.jpg) center center / cover no-repeat;
   background: url(/images/tate2.jpg) center center / cover no-repeat;
   justify-content: center;
   align-items: center;
-  
   
   .titles{
     height: 100vh;
@@ -89,7 +87,6 @@
       50% { transform:translateY(0) }
       100% { transform:translateY(0) }
     }
-
   }
 
   .btns{
@@ -172,59 +169,52 @@
     .second-page__content2{
       font-size: 24px;
       padding-bottom: 8px;
-
     }
   }
-    .how-to-use{
-      padding-top: 5px;
 
-      text-align: center;
-      font-size: 25px;
-      // display: flex;
+  .how-to-use{
+    padding-top: 5px;
 
-      .wrapp-how-to{
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      // margin: 0 auto; 
-        
-        .wrapp-how-to1{
-          font-size: 16px;
-          width: 50%;
-          // margin:  0 auto; 
+    text-align: center;
+    font-size: 25px;
 
-          .how-to1{
-            align-items: center;
+    .wrapp-how-to{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+      
+      .wrapp-how-to1{
+        font-size: 16px;
+        width: 50%;
 
-            .how-to__picture1{
-              margin-top: 20px;
-              width: 85%;
-              max-width: 100%;
-              height:auto;
-              // max-height: 50%;
-            }
+        .how-to1{
+          align-items: center;
+
+          .how-to__picture1{
+            margin-top: 20px;
+            width: 85%;
+            max-width: 100%;
+            height:auto;
           }
         }
-        .wrapp-how-to2{
-          font-size: 16px;
-          width: 50%;
+      }
+      .wrapp-how-to2{
+        font-size: 16px;
+        width: 50%;
 
-          .how-to2{
-            margin:  0 auto;  
-            align-items: center;
+        .how-to2{
+          margin:  0 auto;  
+          align-items: center;
 
-            .how-to__picture2{
-              width: 70%;
-              max-width: 100%;
-              height:auto;
-              // height: 40vh;
-              // max-height: 100%;
-              // width:auto;
-            }
+          .how-to__picture2{
+            width: 70%;
+            max-width: 100%;
+            height:auto;
           }
         }
       }
     }
+  }
 
   .link{
     width: 50%;
@@ -248,8 +238,5 @@
     .btn:hover{
       letter-spacing: 15px;
     }
-
+  }
 }
-}
-
-// }
