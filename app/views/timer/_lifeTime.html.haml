@@ -1,0 +1,41 @@
+%body.slide
+  .slideshow
+    %input#switch1{:checked => "checked", :name => "slideshow", :type => "radio"}/
+    %input#switch2{:name => "slideshow", :type => "radio"}/
+    %input#switch3{:name => "slideshow", :type => "radio"}/
+    %input#switch4{:name => "slideshow", :type => "radio"}/
+    
+    .slideContents
+      %section#slide1
+        .contents
+          %p.lifetime{id: "left-time"}
+            = @lifeTimeSec
+          %h1.time-unit sec
+      %section#slide2
+        .contents
+          %p.lifetime
+            = @lifeTimeHour 
+          %h1.time-unit hour
+      %section#slide3
+        .contents
+          %p.lifetime
+            = @lifeTimeDay
+          %h1.time-unit days
+      %section#slide4
+        .contents
+          %p.lifetime
+            = @lifeTimeMnt 
+          %h1.time-unit months
+
+    %p.arrow.prev
+      %i.ico
+      %label{:for => "switch1"}
+      %label{:for => "switch2"}
+      %label{:for => "switch3"}
+      %label{:for => "switch4"}
+    %p.arrow.next
+      %i.ico
+      %label{:for => "switch1"}
+      %label{:for => "switch2"}
+      %label{:for => "switch3"}
+      %label{:for => "switch4"}

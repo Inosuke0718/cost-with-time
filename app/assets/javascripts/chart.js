@@ -14,15 +14,10 @@ $(function() {
   function wageMultiPeople() {
     calcWageRate = 0;
     for (let i = 1; i <= cnt  ; i++) {
-
       if($(`#people-${i}`).length){
         var valWage = $(`#wage-${i}`).val() *100 ;
-        // console.log(valWage)
         var valPeople = $(`#people-${i}`).val();
         calcWageRate = valWage * valPeople + calcWageRate 
-        // console.log(calcWageRate)
-        console.log(cnt)
-        // debugger
       }else{
       }
     }
@@ -62,7 +57,7 @@ $(function() {
         // legend: {
         //     display: false
         // },
-      scales: {                          //軸設定
+        scales: {                          //軸設定
           yAxes: [{                      //y軸設定
               display: true,             //表示設定
               scaleLabel: {              //軸ラベル設定
@@ -78,39 +73,30 @@ $(function() {
               },
           }],
           xAxes: [{                         //x軸設定
-              display: true,                //表示設定
-              // barPercentage: 0.4,           //棒グラフ幅
-              // categoryPercentage: 0.4,      //棒グラフ幅
-              scaleLabel: {                 //軸ラベル設定
-                display: true,             //表示設定
-                labelString: 'time(hour)',  //ラベル
-                fontSize: 15               //フォントサイズ
-              },
-              // ticks: {
-              //     fontSize: 18             //フォントサイズ
-              // },
+            display: true,                //表示設定
+            // barPercentage: 0.4,           //棒グラフ幅
+            // categoryPercentage: 0.4,      //棒グラフ幅
+            scaleLabel: {                 //軸ラベル設定
+              display: true,             //表示設定
+              labelString: 'time(hour)',  //ラベル
+              fontSize: 15               //フォントサイズ
+            },
+            // ticks: {
+            //     fontSize: 18             //フォントサイズ
+            // },
           }],
+        },
       },
-    },
-
-
-
-      
     });
-    
   }
 
   $(document).on("click", "#add",function(){
     cnt = cnt +1
   });
 
-
-
   $("#reg-info").change(function() {
     makeGraph()
   });
-
- 
 
   $(document).on("click", "#minus",function(){
     makeGraph()

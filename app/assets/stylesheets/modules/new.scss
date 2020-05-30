@@ -41,34 +41,30 @@
       display: flex;
       margin-top:20px;
 
-
-      // height: 30px;
-      // position: relative;
-
       #stop{
         display: none;
         color: white;
         font-size: 25px;
-        border: none;  /* 枠線を消す */
-        outline: none; /* クリックしたときに表示される枠線を消す */
-        background: transparent; /* 背景の灰色を消す */
+        border: none;
+        outline: none;
+        background: transparent;
         outline:0;
       }
 
       #play{
         color: white;
         font-size: 25px;
-        border: none;  /* 枠線を消す */
-        outline: none; /* クリックしたときに表示される枠線を消す */
-        background: transparent; /* 背景の灰色を消す */
+        border: none;
+        outline: none;
+        background: transparent;
       }
 
       #reset{
         color: white;
         font-size: 25px;
-        border: none;  /* 枠線を消す */
-        outline: none; /* クリックしたときに表示される枠線を消す */
-        background: transparent; /* 背景の灰色を消す */
+        border: none;
+        outline: none;
+        background: transparent;
         margin-right: 15px;
         margin-left: 15px;
       }
@@ -76,9 +72,9 @@
       #save{
         color: white;
         font-size: 25px;
-        border: none;  /* 枠線を消す */
-        outline: none; /* クリックしたときに表示される枠線を消す */
-        background: transparent; /* 背景の灰色を消す */
+        border: none;
+        outline: none;
+        background: transparent;
       }
     }
     .login{
@@ -102,14 +98,11 @@
 
 
       &__title{
-        // background-color:rgba(17, 105, 187, 0.637);
         color: white;
         color: rgb(41, 41, 61);
         text-decoration: underline;
         font-size: 18px;
-
       }
-
 
       .reg-info{
         color: rgb(255, 255, 255);
@@ -124,8 +117,6 @@
           align-items: center;
           margin-bottom: 3px;
 
-          
-
           .reg-info__input--wage{
             width: 80px;
             text-align: right;
@@ -133,7 +124,6 @@
             outline: none;
             background-color: rgba(255, 255, 255,0.4);
             margin-right: 10px;
-
           }
 
           .reg-info__input--people{
@@ -145,25 +135,24 @@
             margin-right: 10px;
             margin-left: 20px;     
             background-color: rgba(255, 255, 255,0.4);
-   
           }
 
           #add{
             margin-left: 15px;
             color: white;
             font-size: 15px;
-            border: none;  /* 枠線を消す */
-            outline: none; /* クリックしたときに表示される枠線を消す */
-            background: transparent; /* 背景の灰色を消す */
+            border: none; 
+            outline: none;
+            background: transparent;
           }
 
           #minus{
             margin-left: 15px;
             color: white;
             font-size: 15px;
-            border: none;  /* 枠線を消す */
-            outline: none; /* クリックしたときに表示される枠線を消す */
-            background: transparent; /* 背景の灰色を消す */
+            border: none;
+            outline: none;
+            background: transparent;
           }
 
         }

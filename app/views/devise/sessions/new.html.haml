@@ -4,6 +4,10 @@
       .account-page__inner--left.account-page__header
         %h2 Log in
         = render "devise/shared/links"
+
+      .account-page__guest
+        = link_to 'Guest Login', users_guest_sign_in_path, method: :post
+
       .account-page__inner--right.user-form
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           .field
@@ -18,3 +22,4 @@
                 = f.password_field :password, autocomplete: "off"
             .actions
               = f.submit "Log in", class: 'btn'
+

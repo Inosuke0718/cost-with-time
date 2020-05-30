@@ -6,11 +6,9 @@
   display: flex;
   width: 100%;
   height: auto;
-  // background: url(tate2.jpg) center center / cover no-repeat;
   background: url(/images/tate2.jpg) center center / cover no-repeat;
   justify-content: center;
   align-items: center;
-  
   
   .titles{
     height: 100vh;
@@ -42,43 +40,37 @@
     align-items: center;
     height: 50px;
     width: 100%;
-    // background-color: rgb(34, 33, 33);
-    // opacity: 0.55;
     font-family: Avenir;
-    font-size: 40px;
+    // font-size: 40px;
     font-size: 4vw;
     color: white;
     text-align: center;
     position: relative;
 
+    &__title{
+      width: 100%;
+    }
+
 
     .life-time__left{
-    // font-size: 60px;
     font-size: 7vw;
-
     font-family: Avenir; 
     }
 
     .life-time__unit{
       font-size: 4vw;
-      // position: absolute;
-      // top: 75px;
       margin-top: -10px;
     }
 
     .life-time__title--btn{
-      // position: absolute;
-      // bottom: -230px;
       font-size: 20px;
       padding-top: 10vh;
 
     }
 
     #details{
-      // position: absolute;
-      // bottom: -300px;
       border: none; 
-      outline: none; /* クリックしたときに表示される枠線を消す */
+      outline: none; 
       background: transparent;
       color: white;
       font-size: 60px;
@@ -95,7 +87,6 @@
       50% { transform:translateY(0) }
       100% { transform:translateY(0) }
     }
-
   }
 
   .btns{
@@ -178,59 +169,52 @@
     .second-page__content2{
       font-size: 24px;
       padding-bottom: 8px;
-
     }
   }
-    .how-to-use{
-      padding-top: 5px;
 
-      text-align: center;
-      font-size: 25px;
-      // display: flex;
+  .how-to-use{
+    padding-top: 5px;
 
-      .wrapp-how-to{
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      // margin: 0 auto; 
-        
-        .wrapp-how-to1{
-          font-size: 16px;
-          width: 50%;
-          // margin:  0 auto; 
+    text-align: center;
+    font-size: 25px;
 
-          .how-to1{
-            align-items: center;
+    .wrapp-how-to{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+      
+      .wrapp-how-to1{
+        font-size: 16px;
+        width: 50%;
 
-            .how-to__picture1{
-              margin-top: 20px;
-              width: 85%;
-              max-width: 100%;
-              height:auto;
-              // max-height: 50%;
-            }
+        .how-to1{
+          align-items: center;
+
+          .how-to__picture1{
+            margin-top: 20px;
+            width: 85%;
+            max-width: 100%;
+            height:auto;
           }
         }
-        .wrapp-how-to2{
-          font-size: 16px;
-          width: 50%;
+      }
+      .wrapp-how-to2{
+        font-size: 16px;
+        width: 50%;
 
-          .how-to2{
-            margin:  0 auto;  
-            align-items: center;
+        .how-to2{
+          margin:  0 auto;  
+          align-items: center;
 
-            .how-to__picture2{
-              width: 70%;
-              max-width: 100%;
-              height:auto;
-              // height: 40vh;
-              // max-height: 100%;
-              // width:auto;
-            }
+          .how-to__picture2{
+            width: 70%;
+            max-width: 100%;
+            height:auto;
           }
         }
       }
     }
+  }
 
   .link{
     width: 50%;
@@ -254,8 +238,5 @@
     .btn:hover{
       letter-spacing: 15px;
     }
-
+  }
 }
-}
-
-// }

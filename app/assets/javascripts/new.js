@@ -1,18 +1,11 @@
 $(function() {
 
   let cnt = 2 
-
-  //htmlのidからデータを取得
-  //取得したデータを変数に代入
   var timer = document.getElementById('timer');
-  //クリック時の時間を保持するための変数定義
   var startTime;
   var startTimeChanged = 0;
-  //経過時刻を更新するための変数。 初めはだから0で初期化
   var elapsedTime = 0;
-  //タイマーを止めるにはclearTimeoutを使う必要があり、そのためにはclearTimeoutの引数に渡すためのタイマーのidが必要
   var timerId;
-  //タイマーをストップ -> 再開させたら0になってしまうのを避けるための変数。
   var timeToadd = 0;
   var calcRslt = 0;
   var calcWageRate = 0;
@@ -20,7 +13,6 @@ $(function() {
   var h;
   var m;
   var s;
-  var cntPeople = 0;
   var cntAveWage = 0;
   var aveWage = 0;
 
@@ -35,7 +27,6 @@ $(function() {
                 <i class="fas fa-user-minus"></i>
                 </button>
                 </div>`
-
     $(".reg-info").append(html);
     cnt = cnt +1
   });
@@ -47,7 +38,6 @@ $(function() {
   var observer = new MutationObserver(function(){
 
     $("#reg-info").change(function() {
-
       startTimeChanged = elapsedTime;
       calcRsltPast = 0;
       calcRsltPast =  calcRslt;
@@ -57,29 +47,24 @@ $(function() {
     calcPrice()
   });
    
-  /** 監視対象の要素オブジェクト */
   const elem = document.getElementById('timer');
-  /** 監視時のオプション */
   const config = { 
     childList: true, 
   };
-  /** 要素の変化監視をスタート */
   observer.observe(elem, config);
 
   function wageMultiPeople() {
     calcWageRate = 0;
+    cntPeople = 0;
+
     for (let i = 1; i < cnt  ; i++) {
 
       if($(`#wage-${i}`).length){
         var valWage = $(`#wage-${i}`).val()  / 3600;
-        // console.log(valWage)
         var valPeople = $(`#people-${i}`).val();
         calcWageRate = valWage * valPeople + calcWageRate 
-        cntPeople = parseInt(cntPeople) + parseInt(valPeople)
-        // cntAveWage = parseInt(cntAveWage) + 1
-
+        cntPeople = Number(valPeople) + Number(cntPeople)      
       }else{
-        console.log("naiyo")
       }
     }
   }
@@ -104,29 +89,22 @@ $(function() {
   function countUp(){
   
     timerId = setTimeout(function(){
-
-        //経過時刻は現在時刻をミリ秒で示すDate.now()からstartを押した時の時刻(startTime)を引く
-        elapsedTime = Date.now() - startTime + timeToadd;
-        updateTimetText()
-
-        countUp();
+      elapsedTime = Date.now() - startTime + timeToadd;
+      updateTimetText()
+      countUp();
     },100);
   }
-
 
   $('#play').click(function(){
     startTime = Date.now();
     countUp();
-    // クリックされた時点でのRateをだす
     wageMultiPeople()
     document.getElementById("play").style.display ="none";
     document.getElementById("stop").style.display ="block";
   });
 
-
   $('#stop').click(function(){
     clearTimeout(timerId);
-    //それを回避するためには過去のスタート時間からストップ時間までの経過時間を足してあげなければならない。elapsedTime = Date.now - startTime + timeToadd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
     timeToadd += Date.now() - startTime;
     document.getElementById("stop").style.display ="none";
     document.getElementById("play").style.display ="block";
@@ -134,10 +112,7 @@ $(function() {
   });
 
   $('#reset').click(function(){
-
     clearTimeout(timerId);
-    // //それを回避するためには過去のスタート時間からストップ時間までの経過時間を足してあげなければならない。elapsedTime = Date.now - startTime + timeToadd (timeToadd = ストップを押した時刻(Date.now)から直近のスタート時刻(startTime)を引く)
-    // timeToadd += Date.now() - startTime;
 
     elapsedTime = 0;
     timeToadd = 0;
@@ -150,22 +125,16 @@ $(function() {
     updateTimetText()
 
     if($('#stop').css('display') == 'block'){
-
       document.getElementById("stop").style.display ="none";
       document.getElementById("play").style.display ="block";  
-    
     }
 
   });
-  // $('#inoue').on('submit', function(e){
-  // e.preventDefault();
+ 
   $(document).on("click", "#save",function(){
 
     var recTime = elapsedTime / 1000
-
-    // var dataTimer = {'timer' :{ "id" :"1", "money" :"111", "time" :"2", "wage" :"1000", "people" :"3", "created_at" :"2020-04-28 11:03:07"}};
     var dataTimer = {'timer' :{ "money" :Math.round(calcRslt), "time" :recTime, "wage" :calcWageRate * 3600 / cntPeople , "people" :cntPeople}};
-  //  debugger
    
     $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
       var token;
@@ -189,7 +158,14 @@ $(function() {
     })
 
     .fail(function(){
-      alert('error');
+      var result = window.confirm("please login or signin");
+      if( result ) {
+        console.log("ログイン画面に移動します")
+        window.location.href = "/users/sign_in"
+      }
+      else {
+        console.log("キャンセルされました。")
+      }
     })
 
   });
