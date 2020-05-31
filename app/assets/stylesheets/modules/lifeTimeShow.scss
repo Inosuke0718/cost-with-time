@@ -7,6 +7,7 @@ body.slide{
   font-family: Avenir; 
   margin-right: 30px;
   color:#2c2c2c;
+  color:rgba(34, 33, 33,0.6);
   font-weight: bold;
   }
 
@@ -113,7 +114,7 @@ body.slide{
   .slideContents section {
     opacity: 0;
   }
-  .slideContents section h1,
+  // .slideContents section h1,
   .slideContents section p {
     margin: 0;
     opacity: 0;

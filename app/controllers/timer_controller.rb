@@ -11,7 +11,7 @@ class TimerController < ApplicationController
       @lifeTimeHour = deadDay * 24 - (nowDay * 24 + Time.new.hour)
       @lifeTimeSec = deadDay * 24 * 3600 - (nowDay * 24 * 3600  + Time.new.hour * 3600 + Time.new.min * 60  + Time.new.sec)
     else
-      @whosLimit = "If you are 30 year old, your life limit is"
+      @whosLimit = "life limit for 30 years old person"
       @lifeTimeMnt = 50 * 12
       @lifeTimeDay = 50 * 365
       @lifeTimeHour = 50 * 365 * 24
