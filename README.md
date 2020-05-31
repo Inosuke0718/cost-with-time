@@ -16,7 +16,7 @@ Cost With Time
 #### □ 本番環境のURL
 http://54.95.23.147/
 #### □ ID/Pass
-ログインID：test_account@test.com  /  PassWord：aaaaaaaa (aが８つです)
+Guest Login（簡単ログイン）をご利用ください。
 
 ## ・制作背景(意図)
 #### 「みんなで生産性の高い仕事がしたい」そんな思いからこのアプリを作成しました。
@@ -27,13 +27,26 @@ http://54.95.23.147/
 
 ## ・DEMO
 #### 時間をお金に変換するタイマー機能
-![timer](https://user-images.githubusercontent.com/63226783/82920859-d08b3300-9fb2-11ea-9d54-28e8639cd111.gif)
+![timer](https://i.gyazo.com/5c576bcd9435c94d092ba8901644cc1c.gif)
+Ajax, chart.js を使用
 
 #### 履歴機能
 ![history](https://user-images.githubusercontent.com/63226783/82921533-7343b180-9fb3-11ea-832a-0da484bbd4be.png)
+Ajax, chart.js を使用
 
 #### 寿命カウンター
 ![lifelimit](https://user-images.githubusercontent.com/63226783/82920438-3b883a00-9fb2-11ea-8469-98059c696e05.gif)
+スライドショー機能、矢印ボタンを押すと寿命の単位がが 秒→時間→日→月 と切り替わります。
+Ajaxを使用
+
+#### ユーザー機能
+deviseを使用
+新規登録、ログイン、ログアウト機能
+マイページ、登録情報編集機能
+
+#### Rspecによる自動テスト機能
+単体テスト機能
+統合テスト機能
 
 ## ・工夫したポイント
 #### □ トップページで余生をカウントダウン（※寿命を８０歳と仮定し算出）
@@ -45,7 +58,14 @@ http://54.95.23.147/
 また背景には、ぼかした画像を入れ、文字やグラフに立体感を出しました。  
 
 ## ・使用技術(開発環境)
-Ruby/Ruby on Rails/JavaScript/MySQL/Github/AWS/Visual Studio Code  
+Ruby 2.5.1, Rails 5.0.7.2
+MySQL 5.6.47
+Capistrano, Nginx, Puma, unicorn
+AWS（VPC, EC2, RDS, Route 53, ALB, S3）
+RSpec
+Sass, jQuery
+Visual Studio Code  
+Github
 
 ## ・課題や今後実装したい機能
 利便性を上げるために、iOSアプリやAndroidアプリでもこのアプリを作成してみたいです。  
