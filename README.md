@@ -35,7 +35,7 @@ Ajax, chart.js を使用
 Ajax, chart.js を使用
 
 #### 寿命カウンター
-![lifelimit](https://user-images.githubusercontent.com/63226783/82920438-3b883a00-9fb2-11ea-8469-98059c696e05.gif)
+![lifelimit](https://i.gyazo.com/b7fc9928d86c07b0c40916c2d379f568.gif)
 スライドショー機能、矢印ボタンを押すと寿命の単位がが 秒→時間→日→月 と切り替わります。
 Ajaxを使用
 
