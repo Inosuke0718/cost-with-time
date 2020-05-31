@@ -50,23 +50,23 @@ Guest Login（簡単ログイン）をご利用ください。
 * 統合テスト機能
 
 ## ・工夫したポイント
-#### □ トップページで余生をカウントダウン（※寿命を８０歳と仮定し算出）
+#### トップページで余生をカウントダウン（※寿命を８０歳と仮定し算出）
 時間の有限で大切なものということを思い出すようにこの機能を追加しました。  
 実際に”人は「死」を意識すると、パフォーマンスが向上する”とう研究もあるので、効果が期待できると思います。  
 
-#### □ 直感的に操作が理解できるデザイン
+#### 直感的に操作が理解できるデザイン
 タイマー機能を邪魔しな様にシンプルなデザインを心がけました。  
 また背景には、ぼかした画像を入れ、文字やグラフに立体感を出しました。  
 
 ## ・使用技術(開発環境)
-Ruby 2.5.1, Rails 5.0.7.2
-MySQL 5.6.47
-Capistrano, Nginx, Puma, unicorn
-AWS（VPC, EC2, RDS, Route 53, ALB, S3）
-RSpec
-Sass, jQuery
-Visual Studio Code  
-Github
+  Ruby 2.5.1, Rails 5.0.7.2
+  MySQL 5.6.47
+  Capistrano, Nginx, Puma, unicorn
+  AWS（VPC, EC2, RDS, Route 53, ALB, S3）
+  RSpec
+  Sass, jQuery
+  Visual Studio Code  
+  Github
 
 ## ・課題や今後実装したい機能
 利便性を上げるために、iOSアプリやAndroidアプリでもこのアプリを作成してみたいです。  
