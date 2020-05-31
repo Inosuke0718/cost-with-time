@@ -59,14 +59,14 @@ Guest Login（簡単ログイン）をご利用ください。
 また背景には、ぼかした画像を入れ、文字やグラフに立体感を出しました。  
 
 ## ・使用技術(開発環境)
-  Ruby 2.5.1, Rails 5.0.7.2
-  MySQL 5.6.47
-  Capistrano, Nginx, Puma, unicorn
-  AWS（VPC, EC2, RDS, Route 53, ALB, S3）
-  RSpec
-  Sass, jQuery
-  Visual Studio Code  
-  Github
+* Ruby 2.5.1, Rails 5.0.7.2
+* MySQL 5.6.47
+* Capistrano, Nginx, Puma, unicorn
+* AWS（VPC, EC2, RDS, Route 53, ALB, S3）
+* RSpec
+* Sass, jQuery
+* Visual Studio Code  
+* Github
 
 ## ・課題や今後実装したい機能
 利便性を上げるために、iOSアプリやAndroidアプリでもこのアプリを作成してみたいです。  
