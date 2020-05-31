@@ -27,15 +27,15 @@ Guest Login（簡単ログイン）をご利用ください。
 
 ## ・DEMO
 #### 時間をお金に変換するタイマー機能
-![timer](https://i.gyazo.com/5c576bcd9435c94d092ba8901644cc1c.gif)
+![timer](https://i.gyazo.com/b7fc9928d86c07b0c40916c2d379f568.gif)
 Ajax, chart.js を使用
 
 #### 履歴機能
-![history](https://user-images.githubusercontent.com/63226783/82921533-7343b180-9fb3-11ea-832a-0da484bbd4be.png)
+![history](https://user-images.githubusercontent.com/63226783/83348909-646e4d80-a36b-11ea-925d-2851f94317b3.png)
 Ajax, chart.js を使用
 
 #### 寿命カウンター
-![lifelimit](https://i.gyazo.com/b7fc9928d86c07b0c40916c2d379f568.gif)
+![lifelimit](https://i.gyazo.com/5c576bcd9435c94d092ba8901644cc1c.gif)
 スライドショー機能、矢印ボタンを押すと寿命の単位がが 秒→時間→日→月 と切り替わります。
 Ajaxを使用
 
