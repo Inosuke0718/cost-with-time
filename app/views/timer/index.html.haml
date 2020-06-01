@@ -27,7 +27,7 @@
         %span
           %ul.user__info
             %li
-              = link_to "History", "/timer/#{current_user.id}"
+              = link_to "History", user_path(current_user.id), method: :get
               = link_to "Logout", destroy_user_session_path, method: :delete
     - else
       .user-nav

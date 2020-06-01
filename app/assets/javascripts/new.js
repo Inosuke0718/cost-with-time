@@ -1,21 +1,18 @@
 $(function() {
 
   let cnt = 2 
-  var timer = document.getElementById('timer');
-  var startTime;
-  var startTimeChanged = 0;
-  var elapsedTime = 0;
-  var timerId;
-  var timeToadd = 0;
-  var calcRslt = 0;
-  var calcWageRate = 0;
-  var calcRsltPast = 0;
-  var h;
-  var m;
-  var s;
-  var cntAveWage = 0;
-  var aveWage = 0;
-
+  let timer = document.getElementById('timer');
+  let startTime;
+  let startTimeChanged = 0;
+  let elapsedTime = 0;
+  let timerId;
+  let timeToadd = 0;
+  let calcRslt = 0;
+  let calcWageRate = 0;
+  let calcRsltPast = 0;
+  let h;
+  let m;
+  let s;
 
   $('#add').click(function(){
     var html = `<div class="reg-info__input">

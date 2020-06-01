@@ -27,10 +27,6 @@ class TimerController < ApplicationController
     end
   end
 
-  def show
-    @timers = Timer.all
-  end
-
   def create  
     @timer = Timer.create(timer_params)
     respond_to do |format|
