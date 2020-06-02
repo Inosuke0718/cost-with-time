@@ -63,6 +63,7 @@ Guest Login（簡単ログイン）をご利用ください。
 * MySQL 5.6.47
 * Capistrano, Nginx, Puma, unicorn
 * AWS（VPC, EC2, RDS, Route 53, ALB, S3）
+* Node.js
 * RSpec
 * Sass, jQuery
 * Visual Studio Code  
@@ -71,7 +72,7 @@ Guest Login（簡単ログイン）をご利用ください。
 ## ・課題や今後実装したい機能
 * Dockerを用いた仮想環境を作成、配布、実行
 * CircleCIを用いたテスト、ビルド、デプロイの自動化
-利便性を上げるために、iOSアプリやAndroidアプリでもこのアプリを作成してみたいです。  
+* 利便性を上げるために、iOSアプリやAndroidアプリでもこのアプリを作成 
 
 ## ・DB設計
 
