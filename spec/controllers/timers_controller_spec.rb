@@ -26,7 +26,6 @@ describe TimerController, type: :controller do
       it "index.html.erbに遷移すること" do
         expect(response).to render_template :index
       end
-
     end 
 
     context 'ログインしていない場合' do

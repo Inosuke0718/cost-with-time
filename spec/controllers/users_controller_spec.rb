@@ -28,11 +28,11 @@ describe UsersController, type: :controller do
     context 'ログインしている場合' do
       before do
         login user
-        patch :update, params: { id: user.id }
+        patch :update, params: { id: 1}
       end
 
-      it "show.html.erbに遷移すること" do
-        expect(response).to render_template :show
+      it "root_pathに遷移すること" do
+        expect(response).to redirect_to(root_path)
       end
     end
   end
