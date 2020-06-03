@@ -3,7 +3,7 @@ require 'rails_helper'
 describe TimerController, type: :controller do
 
   let(:user){create(:user)}
-  let(:timer){create(:timer)}
+  let(:timers){create(:timer)}
 
   describe 'GET #new' do
     it "new.html.erbに遷移すること" do
@@ -69,8 +69,5 @@ describe TimerController, type: :controller do
       end
     end
   end
-
-
-
 end
 

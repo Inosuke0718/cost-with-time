@@ -1,6 +1,6 @@
 FactoryBot.define do
 
-  factory :timers do
+  factory :timer do
     id                    {1}
     user_id                {1}
     money                  {12000}
