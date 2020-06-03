@@ -10,40 +10,67 @@ describe TimerController, type: :controller do
       get :new
       expect(response).to render_template :new
     end
-
   end
 
-  describe 'GET #show' do
-    it "show.html.erbに遷移すること" do
-      get :show, params: {  id: 1 }
-      expect(response).to render_template :show
+  describe '#index' do
+    context 'ログインしている場合' do
+      before do
+        login user
+        get :index, params: { user_id: user.id }
+      end
+
+      it '@userに期待した値が入っていること' do
+        expect(assigns(:user)).to eq user
+      end
+
+      it "index.html.erbに遷移すること" do
+        expect(response).to render_template :index
+      end
+
+    end 
+
+    context 'ログインしていない場合' do
+      before do
+        get :index, params: { user_id: user.id }
+      end
+
+      it '@userに期待した値が入っていること' do
+        expect(assigns(:user)).to eq  nil
+      end
+
+      it "index.html.erbに遷移すること" do
+        expect(response).to render_template :index
+      end
     end
-
-    it "@timersに正しい値が入っていること" do
-      timers = build(:timer, user_id: user.id)
-      get :show, params: { id: timer }
-      expect(assigns(:timers)).to eq timer
-    end
-
-  #   it "@timersに正しい値が入っていること" do
-  #     expect(assigns(:timers)).to be_a_new(Timer)
-  #   end
-
-  # end
-
-  describe 'GET #index' do
-    it "index.html.erbに遷移すること" do
-      timers = build(:timer, user_id: user.id)
-      get :index, params: { id: 1 }
-      expect(response).to render_template :show
-    end
-
-    it "@tweetに正しい値が入っていること" do
-    end
-
-    it "index.html.erbに遷移すること" do
-    end
-
   end
+
+  describe '#create' do
+    context 'ログインしている場合' do
+      before do
+        login user
+        get :index, params: { user_id: user.id }
+      end
+
+      it '@timerに期待した値が入っていること' do
+        expect(assigns(:timer)).to eq @timer
+      end
+    end
+  end
+
+    describe '#edit' do
+    context 'ログインしている場合' do
+      before do
+        login user
+        get :index, params: { user_id: user.id }
+      end
+
+      it '@timerに期待した値が入っていること' do
+        expect(assigns(:timer)).to eq @timers
+      end
+    end
+  end
+
+
 
 end
+
