@@ -1,0 +1,145 @@
+.wrapp-sw2{
+  display: none;
+  height: 50vh;
+  width: 100%;
+  
+
+  main.cntdwn{
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    
+    section.cost{
+      display: flex;
+      height: 60%;
+
+      .cost1{
+        &__title{
+          text-align: center;
+          font-size: 18px;
+          margin-top: 25px;
+        }
+
+        &__contents{
+          display: flex;
+          align-items: center;
+          font-size: 65px;
+          margin: 0 10px;
+
+          &--unit{
+            margin: 0 10px;
+          }
+        }
+      }
+
+      .cost2{
+        margin: auto;
+
+        &__title{
+          text-align: center;
+          font-size: 18px;
+          margin-top: 25px;
+        }
+
+        &__contents{
+          display: flex;
+          align-items: center;
+
+          font-size: 90px;
+          margin: 10px 15px 0 0;
+          // margin: auto;
+
+          &--unit{
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+
+    .time{
+      height: 30%;
+      margin: 5px 5px;
+
+      &__title{
+        font-size: 16px;
+        text-align: center;
+      }
+      &__timer{
+        font-size: 50px;
+      }
+    }
+
+    .input-time{
+      margin: 5px 5px;
+      &__title{
+        text-align: center;
+      }
+
+      .input-time__reg{
+        display: flex;
+        line-height: 42px;
+
+        &--h{
+          width: 40px;
+          margin: 10px 10px;
+          border: none;
+        }
+      
+        &--m{
+          width: 40px;
+          margin: 10px 10px;
+          border: none;
+        }
+        &--s{
+          width: 40px;
+          margin: 10px 10px;
+          border: none;
+
+        }
+      }
+    }
+
+    .cnddwn-btn{
+      height: 10%;
+
+      display: flex;
+      margin: 10px 0;
+
+      #cntdwn-play{
+        color: white;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      #cntdwn-stop{
+        color: white;
+        display: none;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      #cntdwn-reset{
+        color: white;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background: transparent;
+        margin: 0 15px;
+      }
+      #cntdwn-save{
+        color: white;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+    }
+  }
+}

@@ -5,38 +5,24 @@
   =link_to image_tag(src="/images/logo.jpg", height: "50", width: "auto"), root_path, class: "iconCWT" 
 
 .wrapper-new
+  = javascript_include_tag "moneyTimer.js"
+  = javascript_include_tag "modeSW.js"
+  = render "cntup"
+  = render "cntdwn"
 
-  .timer-wrap
+  %section.mode-switch
+    .mode-switch__title1{id: "title1"}
+      STOPWATCH MODE
+    .mode-switch__title2{id: "title2"}
+      COUNTDOWN-TIMER MODE  
+
+    .mode-switch__btns
+      %button{id: "switch1"}
+        = icon('fas', 'toggle-on')
+      %button{id: "switch2"}
+        = icon('fas', 'toggle-off')
     
-    = javascript_include_tag "new.js"
-
-    .price
-      .price__unit
-        ¥
-      .price__act{id:"price__act"}
-        0
-    
-    .time
-      .time__name
-        TIME
-      .time__timer{id:"timer"}
-        00:00:00
-
-    .btn
-      %button{id: "play"}
-        = icon('fas', 'play')
-
-      %button{id: "stop"}
-        = icon('fas', 'stop')
-
-      %button{id: "reset"}
-        = icon('fas', 'undo-alt')
-
-      %button{id: "save"}
-        = icon('fas', 'save')
-    
-  .people-graph-wrap
-
+  %section.people-graph-wrap
     .reg-wrapp
       .reg-wrapp__title
         Please enter the wages and the number of participants
