@@ -4,9 +4,12 @@
     #js-popup.popup
       .popup-inner
         #js-close-btn.close-btn
-          %i.fas.fa-times
-        %a{:href => "#"}
-          %img{alt: "ポップアップ画像", src: "/images/time-is-up.png"}/
+        -#   %i.fas.fa-times
+        -# %a{:href => "#"}
+        %img{alt: "ポップアップ画像", src: "/images/time-is-up.png"}/
+        .popup-save
+          %button{id: "cntdwn-save2"}
+            SAVE
       #js-black-bg.black-background
 
     -# = javascript_include_tag "cntdwn.js"
