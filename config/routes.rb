@@ -11,7 +11,11 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
  
-  resources :timer
+  resources :timer do
+    collection do
+      get 'cntdwn', to: 'timer#cntdwn'
+    end
+  end
   resources :users  
   
 end

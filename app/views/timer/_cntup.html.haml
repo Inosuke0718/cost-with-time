@@ -1,0 +1,24 @@
+.wrapp-sw1{id: "mode1"} 
+  %section.timer-wrap
+    -# = javascript_include_tag "new.js"
+    .price
+      .price__unit
+        ¥
+      .price__act{id:"price__act"}
+        0
+    
+    .time
+      .time__name
+        TIME
+      .time__timer{id:"timer"}
+        00:00:00
+
+    .btn
+      %button{id: "play"}
+        = icon('fas', 'play')
+      %button{id: "stop"}
+        = icon('fas', 'stop')
+      %button{id: "reset"}
+        = icon('fas', 'undo-alt')
+      %button{id: "save"}
+        = icon('fas', 'save')

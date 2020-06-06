@@ -1,0 +1,65 @@
+.wrapp-sw2{id: "mode2"}
+  %main.cntdwn
+
+    #js-popup.popup
+      .popup-inner
+        #js-close-btn.close-btn
+        -#   %i.fas.fa-times
+        -# %a{:href => "#"}
+        %img{alt: "ポップアップ画像", src: "/images/time-is-up.png"}/
+        .popup-save
+          %button{id: "cntdwn-save2"}
+            SAVE
+      #js-black-bg.black-background
+
+    -# = javascript_include_tag "cntdwn.js"
+
+    %section.cost
+      -#  次回実装予定
+      -# .cost1
+      -#   %h2.cost1__title
+      -#     Countdown the cost
+      -#   .cost1__contents
+      -#     .cost1__contents--unit
+      -#       ￥
+      -#     .cost1-contents--timer{id:"cntdwn-cost1"}
+      -#       0,000
+
+      .cost2
+        -# %h2.cost2__title
+        -#   Countdown the cost
+        .cost2__contents
+          .cost2__contents--unit
+            ￥
+          .cost2__contents--timer{id:"cntdwn-cost2"}
+            0,000
+
+    %section.time
+      %h2.time__title
+        TIME
+      .time__timer{id:"cntdwn-timer"}
+        00:00:00
+
+    %section.input-time
+      %h2.input-time__title
+        Please enter the time
+      .input-time__reg
+        %input.input-time__reg--h{id: "cntdwn-h", name: "wage", type: "number",min: "0", max:"99", placeholder:"00"}
+          H
+        %input.input-time__reg--m{id: "cntdwn-m", name: "wage", type: "number",min: "0", max:"59", placeholder:"00"}
+          M
+        %input.input-time__reg--s{id: "cntdwn-s", name: "wage", type: "number",min: "0", max:"59", placeholder:"00"}
+          S
+
+    %section.cnddwn-btn
+      %button{id: "cntdwn-play"}
+        = icon('fas', 'play')
+      %button{id: "cntdwn-stop"}
+        = icon('fas', 'stop')
+      %button{id: "cntdwn-reset"}
+        = icon('fas', 'undo-alt')
+      %button{id: "cntdwn-save"}
+        = icon('fas', 'save')
+
+
+

@@ -11,7 +11,8 @@
   background: url(/images/timer-back1.jpg) center center / cover no-repeat;
   display: flex;
   flex-direction: column;
-
+  
+.wrapp-sw1{
   .timer-wrap{
     height: 50vh;
     width: 100%;
@@ -86,11 +87,44 @@
     }
     .login{
       width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 55px;
+      height: 20px;
+      position: absolute;
+      left: 55px;
     }
-
+}
+  .mode-switch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    &__title1{
+      color: white;
+      font-size: 16px;
+    }
+    &__title2{
+      display: none;
+      color: white;
+      font-size: 16px;
+    }
+    &__btns{
+      display: flex;
+      #switch1{
+        color: white;
+        font-size: 25px;
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      #switch2{
+        color: white;
+        display: none;
+        font-size: 25px;
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+    }
+  }
   .people-graph-wrap{
       height: calc(100vh -50vh);
 
@@ -175,7 +209,6 @@
         color: rgb(41, 41, 61);
         text-decoration: underline;
         font-size: 18px;
-
       }
     }
   }
