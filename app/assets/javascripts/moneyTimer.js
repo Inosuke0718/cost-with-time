@@ -293,7 +293,8 @@ $('#cntdwn-play').click(function(){
 
   
   $(document).on("click", "#cntdwn-save",function(){
-    var recTime = elapsedTime2 / 1000
+    var recTime = elapsedTime2
+    debugger
     var dataTimer2 = {'timer' :{ "money" :Math.round(calcRslt), "time" :recTime, "wage" :calcWageRate * 3600 / cntPeople , "people" :cntPeople}};
 
     $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
@@ -349,7 +350,7 @@ $('#cntdwn-play').click(function(){
 
   $(document).on("click", "#cntdwn-save2",function(){
     var popup = document.getElementById('js-popup');
-    var recTime = elapsedTime2 / 1000
+    var recTime = elapsedTime2
     var dataTimer3 = {'timer' :{ "money" :Math.round(calcRslt), "time" :recTime, "wage" :calcWageRate * 3600 / cntPeople , "people" :cntPeople}};
 
     $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
