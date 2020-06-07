@@ -1,19 +1,23 @@
-.wrapper
+%main.wrapper
   = javascript_include_tag "index.js"
   %section.titles
     %span.title
       Cost With Time
 
-    .subtitle
+    .subtitle{lang: "eng"}
       Let's increase our work efficiency
+    .subtitle{lang: "jp"}
+      作業効率を上げよう！
   
-  .life-time
+  %section.life-time
     .life-time__title
       = @whosLimit
       = render "lifeTime"
    
-    .life-time__title--btn
+    .life-time__title--btn{lang: "eng"}
       What is this for
+    .life-time__title--btn{lang: "jp"}
+      なにこのアプリ？
 
     %button{id: "details"}
       = icon('fas', 'chevron-down')
@@ -33,19 +37,50 @@
       .user-nav
         = link_to "-Login", new_user_session_path, class: 'post'
         = link_to "-Registration", new_user_registration_path, class: 'post'
+    
 
-.wrapper-second
+    .btns__language{lang: "eng"}
+      = icon('fas', 'globe')
+      Language
+    .btns__language{lang: "jp"}
+      = icon('fas', 'globe')
+      言語
+    
+    .btns__country
+      = javascript_include_tag "languageChange.js"
+      %button.btns__country--jp{id: "jp-btn"}
+        %img.btns__country--img{src: "/images/Japan.png",}
+      -# %button{id: "japanese"}
+      -#   %img{src: "/images/Spain.png"}        
+      %button.btns__country--uk{id: "eng-btn"}
+        %img.btns__country--img{src: "/images/United Kingdom(Great Britain).png"}  
+
+%main.wrapper-second
   %script{src: "//code.jquery.com/jquery-1.11.3.min.js"}
   = javascript_include_tag "index.js"
   %section.second-page
-    .second-page__title
+    .second-page__title{lang: "eng"}
       Welcome to Cost With Time
-    .second-page__content
+    .second-page__title{lang: "jp"}
+      Cost With Time へようこそ
+
+    .second-page__content{lang: "eng"}
       %h2.second-page__content2
         This app is a timer to conver the money for the meeting, study etc...
       %h3.second-page__content3
         And the main theme of this app is "remember that time has limit and super important thing". 
-  %section.how-to-use
+    .second-page__content{lang: "jp"}
+      %h2.second-page__content2
+        このアプリは時間をお金に変換するタイマーになります。
+        %br
+          登録した時給と人数を基に、1秒毎に発生するコストをカウントします。
+      %h3.second-page__content3
+        時間をお金に変換することで、「払った時間に対して正しいリターンが得られたか」を簡単に確認することができます。
+        %br
+          利用シーン：会議、勉強、SNSやYouTube、ネットサーフィンなどの娯楽等。
+
+
+  %section.how-to-use{lang: "eng"}
     How to use
     .wrapp-how-to
       .wrapp-how-to1
@@ -60,6 +95,26 @@
           Step2
           %br
             Click the play button
+          %img.how-to__picture2{src: "/images/how-to2.gif"}
+
+
+  %section.how-to-use{lang: "jp"}
+    使い方
+    .wrapp-how-to
+      .wrapp-how-to1
+        .how-to1
+          Step1
+          %br
+            参加者の時給と人数を入力してください
+          %img.how-to__picture1{src: "/images/how-to1.gif"}
+
+      .wrapp-how-to2
+        .how-to2
+          Step2
+          %br
+            再生ボタンを押してください。
+            %br
+              1秒ごとに時間と値段がカウントされます
           %img.how-to__picture2{src: "/images/how-to2.gif"}
 
   %section.link
