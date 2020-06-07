@@ -13,8 +13,8 @@
   .titles{
     height: 100vh;
     width: 325px;
-    background-color: rgb(34, 33, 33);
-    opacity: 0.55;
+    background-color: rgba(34, 33, 33, 0.55);
+    // opacity: 0.55;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,8 +91,8 @@
   .btns{
     height: 100vh;
     width: 325px;
-    background-color: rgb(34, 33, 33);
-    opacity: 0.55;
+    background-color: rgba(34, 33, 33, 0.55);
+    // opacity: 0.55;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,6 +128,28 @@
     .user-nav{
       display: flex;
       flex-direction: column;
+    }
+
+    &__language{
+      color:white;
+      margin-top: 20px;
+    }
+
+    &__country{
+      margin-top: 10px;
+
+      &--jp{
+        background-color:rgba(0,0,0,0);
+        outline:0;
+        border: none; 
+        // background: transparent;
+      }
+      &--uk{
+        background-color: rgba(255, 230, 0, 0.4);
+        outline:0;
+        border: none; 
+        // background: transparent;
+      }
     }
   }
 
@@ -220,7 +242,6 @@
     text-align:  center; 
 
     .btn {
-     
       margin:  0 auto; 
       display: block;
       font-size: 24px;
