@@ -35,6 +35,7 @@ $(function() {
     x35 = calcWageRate * 3.5
     x40 = calcWageRate * 4
     var ctx = document.getElementById('mycanvas').getContext('2d');
+
     var myChart = new Chart(ctx, {
       type: 'line',
       data: {
@@ -46,44 +47,27 @@ $(function() {
         }, ]
       },
 
-      // title: {                           //タイトル設定
-      //   display: false,                 //表示設定
-      //   fontSize: 5,                  //フォントサイズ
-      //   text: 'タイトル'                //ラベル
-      // },
       options: {
         responsive: true,
-        // maintainAspectRatio: false,
-        // legend: {
-        //     display: false
-        // },
-        scales: {                          //軸設定
-          yAxes: [{                      //y軸設定
-              display: true,             //表示設定
-              scaleLabel: {              //軸ラベル設定
-                display: true,          //表示設定
-                labelString: 'cost(¥)',  //ラベル
-                fontSize: 15               //フォントサイズ
+        scales: {
+          yAxes: [{
+              display: true,
+              scaleLabel: { 
+                display: true,
+                labelString: 'cost(¥)',
+                fontSize: 15
               },
-              ticks: {                      //最大値最小値設定
-                  min: 0,                   //最小値
-              //     max: 30,                  //最大値
-              //     fontSize: 18,             //フォントサイズ
-              //     stepSize: 5               //軸間隔
+              ticks: { 
+                  min: 0,
               },
           }],
-          xAxes: [{                         //x軸設定
-            display: true,                //表示設定
-            // barPercentage: 0.4,           //棒グラフ幅
-            // categoryPercentage: 0.4,      //棒グラフ幅
-            scaleLabel: {                 //軸ラベル設定
-              display: true,             //表示設定
-              labelString: 'time(hour)',  //ラベル
-              fontSize: 15               //フォントサイズ
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true, 
+              labelString: 'time(hour)', 
+              fontSize: 15 
             },
-            // ticks: {
-            //     fontSize: 18             //フォントサイズ
-            // },
           }],
         },
       },
