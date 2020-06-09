@@ -4,7 +4,7 @@
   
   =link_to image_tag(src="/images/logo.jpg", height: "50", width: "auto"), root_path, class: "iconCWT" 
 
-.wrapper-new
+%main.wrapper-new
   = javascript_include_tag "moneyTimer.js"
   = javascript_include_tag "modeSW.js"
   = render "cntup"
@@ -28,10 +28,10 @@
         Please enter the wages and the number of participants
       .reg-info{id:"reg-info"}
         .reg-info__input
-          %input.reg-info__input--wage{:id => "wage-1", :name => "wage", :type => "number",  :placeholder =>"00,000"}
+          %input.reg-info__input--wage{id: "wage-1", name: "wage", type: "number",  placeholder:"00,000", min: "0"}
           ¥/h
 
-          %input.reg-info__input--people{id: "people-1", name: "people", type: "number", value: "", :placeholder =>"0"}
+          %input.reg-info__input--people{id: "people-1", name: "people", type: "number", value: "", placeholder:"0", min: "0"}
           people
 
           %button{id: "add"}

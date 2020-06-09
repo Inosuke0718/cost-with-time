@@ -1,7 +1,6 @@
 $(function() {
   let langFlg = "eng";
 
-
   $('#jp-btn').click(function(){
     document.getElementById("jp-btn").style.backgroundColor ="rgba(255, 230, 0, 0.4)";
     document.getElementById("eng-btn").style.backgroundColor ="rgba(0,0,0,0)";
@@ -16,10 +15,7 @@ $(function() {
     display()
   });  
 
-
-
   function display(){
-    // --- 切り替え対象のclass一覧を取得 ----------------------
     var elm = [];
     elm[0] = document.getElementsByClassName("btns__language");
     elm[1] = document.getElementsByClassName("life-time__title--btn");
@@ -31,11 +27,8 @@ $(function() {
 
     for (var i = 0; i < elm.length ; i++) {
       for (var ii = 0; ii < 2 ; ii++) {
-        // debugger
-        // --- 選択された言語と一致は表示、その他は非表示 -------
         if(elm[i][ii].getAttribute("lang") == langFlg){
           elm[i][ii].style.display = 'block';
-          // debugger
         }
         else{
           elm[i][ii].style.display = 'none';
@@ -43,24 +36,6 @@ $(function() {
       }
     }
   }
-
-
-	// function display() {
-  //   if(languageFlg == 0) {
-
-  //     lang = $(".btns__language").attr("language")
-  //     if(lang == "jp"){
-  //       lang.hide();
-  //       // $(".btns__language").hide();
-  //       debugger
-  //     }
-
-  //     console.log(lang )
-  //     // console.log(lang1)
- 
-  //   } else {
-  //   }
-  // }
 })
 
 

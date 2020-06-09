@@ -31,9 +31,9 @@ $(function() {
   let m2;
   let s2;
 
-    let priceAct2 = document.getElementById('cntdwn-cost2');
-    let remain = 0
-    let resetSignal = 1;
+  let priceAct2 = document.getElementById('cntdwn-cost2');
+  let remain = 0
+  let resetSignal = 1;
 
 
 // 共通機能-------------------------------------------
@@ -72,9 +72,8 @@ $(function() {
   observer.observe(elem, config);
 
   function wageMultiPeople() {
-    // maxPrice計算よう
+    // maxPrice計算※追加実装機能用
     // maxPricePast = elapsedTime * calcWageRate 
-
     calcWageRate = 0;
     cntPeople = 0;
 
