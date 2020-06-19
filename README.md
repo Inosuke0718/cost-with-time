@@ -27,7 +27,8 @@ Guest Login（簡単ログイン）をご利用ください。
 
 ## ・DEMO
 #### 時間をお金に変換するタイマー機能
-![timer](https://i.gyazo.com/b7fc9928d86c07b0c40916c2d379f568.gif)
+![timer1](https://i.gyazo.com/b7fc9928d86c07b0c40916c2d379f568.gif)
+![timer2](https://user-images.githubusercontent.com/63226783/85104979-9543f300-b244-11ea-9b42-74fc0968b1af.gif)
 * カウントアップ、カウントダウン2つの機能があります。
 * Ajax, chart.js を使用
 
