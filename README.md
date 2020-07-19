@@ -71,6 +71,7 @@ Guest Login（簡単ログイン）をご利用ください。
 * Github
 
 ## ・課題や今後実装したい機能
+![test](https://i.gyazo.com/9d8d7fb9a4ea4d45cddd5be5c709abd8.gif)
 * Dockerを用いた仮想環境を作成、配布、実行
 * CircleCIを用いたテスト、ビルド、デプロイの自動化
 * 利便性を上げるために、iOSアプリやAndroidアプリでもこのアプリを作成 
